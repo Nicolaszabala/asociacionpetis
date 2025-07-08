@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-pink-50 to-blue-50">
+    <div className="min-h-screen bg-gradient-to-br from-white to-gray-100">
       {/* Hero Section */}
       <section className="relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
@@ -12,10 +12,10 @@ export default function Home() {
               <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
                 Asociación Petís
               </h1>
-              <h2 className="text-2xl md:text-3xl font-semibold text-pink-600 mb-8">
+              <h2 className="text-2xl md:text-3xl font-semibold text-gray-800 mb-8">
                 Apoio á Crianza e á Lactancia
               </h2>
-              <p className="text-xl text-gray-700 mb-10 leading-relaxed">
+              <p className="text-xl text-gray-600 mb-10 leading-relaxed">
                 Tiñamos ganas, forzas e ilusión. Tiñamos a necesidade dunha tribo. 
                 Así nace Petís, o teu espazo seguro en Pontevedra para que nunca máis 
                 te sintas soa, insegura ou xulgada.
@@ -29,13 +29,12 @@ export default function Home() {
                 </Link>
                 <Link 
                   href="/actividades"
-                  className="bg-white hover:bg-gray-50 text-pink-600 font-semibold py-4 px-8 rounded-full border-2 border-pink-600 transition-colors duration-200"
+                  className="bg-white text-pink-600 font-semibold py-4 px-8 rounded-full hover:bg-pink-100 hover:border-pink-600 transition-colors duration-200 border-2 border-pink-600"
                 >
                   Ver Actividades
                 </Link>
               </div>
             </div>
-            
             <div className="relative">
               <div className="relative h-96 lg:h-[500px] rounded-2xl overflow-hidden shadow-2xl">
                 <Image
@@ -49,12 +48,10 @@ export default function Home() {
             </div>
           </div>
         </div>
-        
         {/* Decorative elements */}
         <div className="absolute top-10 left-10 w-20 h-20 bg-pink-200 rounded-full opacity-30"></div>
-        <div className="absolute bottom-20 right-10 w-32 h-32 bg-blue-200 rounded-full opacity-30"></div>
+        <div className="absolute bottom-20 right-10 w-32 h-32 bg-pink-100 rounded-full opacity-30"></div>
       </section>
-
       {/* Features Section */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -66,36 +63,35 @@ export default function Home() {
               Unha comunidade de apoio para familias con crianzas pequenas
             </p>
           </div>
-          
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="text-center p-8 rounded-2xl bg-gradient-to-br from-pink-50 to-pink-100">
-              <div className="w-16 h-16 bg-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+            <div className="text-center p-8 rounded-2xl bg-white border border-[var(--color-primary)] warm-shadow">
+              <div className="w-16 h-16 bg-[var(--color-primary)] rounded-full flex items-center justify-center mx-auto mb-6">
                 <span className="text-white text-2xl">👥</span>
               </div>
-              <h4 className="text-xl font-semibold text-gray-900 mb-4">Grupo de Apoio</h4>
-              <p className="text-gray-700">
+              <h4 className="text-xl font-semibold text-[var(--color-text-main)] mb-4">Grupo de Apoio</h4>
+              <p className="text-[var(--color-text-secondary)]">
                 Reunións semanais onde compartir experiencias, inquedanzas e moito apoio 
                 nun ambiente acolledor e seguro.
               </p>
             </div>
             
-            <div className="text-center p-8 rounded-2xl bg-gradient-to-br from-blue-50 to-blue-100">
-              <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
+            <div className="text-center p-8 rounded-2xl bg-white border border-[var(--color-primary)] warm-shadow">
+              <div className="w-16 h-16 bg-[var(--color-primary)] rounded-full flex items-center justify-center mx-auto mb-6">
                 <span className="text-white text-2xl">🎨</span>
               </div>
-              <h4 className="text-xl font-semibold text-gray-900 mb-4">Obradoiros</h4>
-              <p className="text-gray-700">
+              <h4 className="text-xl font-semibold text-[var(--color-text-main)] mb-4">Obradoiros</h4>
+              <p className="text-[var(--color-text-secondary)]">
                 Actividades educativas e lúdicas para familias, desde talleres de 
                 crianza ata actividades creativas cos petís.
               </p>
             </div>
             
-            <div className="text-center p-8 rounded-2xl bg-gradient-to-br from-green-50 to-green-100">
-              <div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-6">
+            <div className="text-center p-8 rounded-2xl bg-white border border-[var(--color-primary)] warm-shadow">
+              <div className="w-16 h-16 bg-[var(--color-primary)] rounded-full flex items-center justify-center mx-auto mb-6">
                 <span className="text-white text-2xl">🌿</span>
               </div>
-              <h4 className="text-xl font-semibold text-gray-900 mb-4">Actividades ao Aire Libre</h4>
-              <p className="text-gray-700">
+              <h4 className="text-xl font-semibold text-[var(--color-text-main)] mb-4">Actividades ao Aire Libre</h4>
+              <p className="text-[var(--color-text-secondary)]">
                 Paseos, picnics e actividades na natureza para disfrutar en familia 
                 e crear lazos entre as crianzas.
               </p>
@@ -105,18 +101,18 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-pink-600 to-purple-600">
+      <section className="py-20 bg-[#CF996E]">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <h3 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Únete á nosa tribo
           </h3>
-          <p className="text-xl text-pink-100 mb-8">
+          <p className="text-xl text-[var(--color-light)] mb-8">
             Asóciate de balde e forma parte dunha comunidade que entende as túas 
             necesidades e te apoia en cada paso da crianza.
           </p>
           <Link 
             href="/unete"
-            className="bg-white text-pink-600 font-semibold py-4 px-8 rounded-full hover:bg-gray-100 transition-colors duration-200 inline-block"
+            className="bg-white text-[#CF996E] font-semibold py-4 px-8 rounded-full hover:bg-[#BFB73F] hover:border-[#BFB73F] transition-colors duration-200 inline-block border-2 border-[#CF996E]"
           >
             Asóciate Agora
           </Link>

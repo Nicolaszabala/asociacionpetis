@@ -29,24 +29,24 @@ export default function Navigation() {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            <Link href="/" className="text-gray-700 hover:text-pink-600 transition-colors">
+            <Link href="/" className="text-gray-700 hover:text-[var(--color-primary-hover)] transition-colors menu-underline">
               Inicio
             </Link>
-            <Link href="/sobre-nos" className="text-gray-700 hover:text-pink-600 transition-colors">
+            <Link href="/sobre-nos" className="text-gray-700 hover:text-[var(--color-primary-hover)] transition-colors menu-underline">
               Sobre nós
             </Link>
-            <Link href="/actividades" className="text-gray-700 hover:text-pink-600 transition-colors">
+            <Link href="/actividades" className="text-gray-700 hover:text-[var(--color-primary-hover)] transition-colors menu-underline">
               Actividades
             </Link>
-            <Link href="/blog" className="text-gray-700 hover:text-pink-600 transition-colors">
+            <Link href="/blog" className="text-gray-700 hover:text-[var(--color-primary-hover)] transition-colors menu-underline">
               Blog
             </Link>
-            <Link href="/contacto" className="text-gray-700 hover:text-pink-600 transition-colors">
+            <Link href="/contacto" className="text-gray-700 hover:text-[var(--color-primary-hover)] transition-colors menu-underline">
               Contacto
             </Link>
             <Link 
               href="/unete" 
-              className="bg-pink-600 text-white px-4 py-2 rounded-full hover:bg-pink-700 transition-colors"
+              className="bg-[var(--color-primary)] text-white px-4 py-2 rounded-full border-2 border-[var(--color-primary)] hover:bg-[var(--color-primary-hover)] hover:border-[var(--color-primary-hover)] transition-colors btn-pulse"
             >
               Únete
             </Link>
@@ -56,7 +56,7 @@ export default function Navigation() {
           <div className="md:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-gray-700 hover:text-pink-600 focus:outline-none"
+              className="text-gray-700 hover:text-[var(--color-primary-hover)] focus:outline-none"
             >
               <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 {isMenuOpen ? (
@@ -75,42 +75,42 @@ export default function Navigation() {
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t">
               <Link 
                 href="/" 
-                className="block px-3 py-2 text-gray-700 hover:text-pink-600 transition-colors"
+                className="block px-3 py-2 text-gray-700 hover:text-[var(--color-primary-hover)] transition-colors menu-underline"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Inicio
               </Link>
               <Link 
                 href="/sobre-nos" 
-                className="block px-3 py-2 text-gray-700 hover:text-pink-600 transition-colors"
+                className="block px-3 py-2 text-gray-700 hover:text-[var(--color-primary-hover)] transition-colors menu-underline"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Sobre nós
               </Link>
               <Link 
                 href="/actividades" 
-                className="block px-3 py-2 text-gray-700 hover:text-pink-600 transition-colors"
+                className="block px-3 py-2 text-gray-700 hover:text-[var(--color-primary-hover)] transition-colors menu-underline"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Actividades
               </Link>
               <Link 
                 href="/blog" 
-                className="block px-3 py-2 text-gray-700 hover:text-pink-600 transition-colors"
+                className="block px-3 py-2 text-gray-700 hover:text-[var(--color-primary-hover)] transition-colors menu-underline"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Blog
               </Link>
               <Link 
                 href="/contacto" 
-                className="block px-3 py-2 text-gray-700 hover:text-pink-600 transition-colors"
+                className="block px-3 py-2 text-gray-700 hover:text-[var(--color-primary-hover)] transition-colors menu-underline"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Contacto
               </Link>
               <Link 
                 href="/unete" 
-                className="block px-3 py-2 bg-pink-600 text-white rounded-md hover:bg-pink-700 transition-colors"
+                className="block px-3 py-2 bg-[var(--color-primary)] text-white rounded-md border-2 border-[var(--color-primary)] hover:bg-[var(--color-primary-hover)] hover:border-[var(--color-primary-hover)] transition-colors btn-pulse"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Únete

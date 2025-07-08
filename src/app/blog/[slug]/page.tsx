@@ -1,3 +1,4 @@
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
@@ -196,13 +197,7 @@ const articles = {
   }
 };
 
-interface PageProps {
-  params: {
-    slug: string;
-  };
-}
-
-export default function BlogPost({ params }: PageProps) {
+export default function BlogPost({ params }: { params: { slug: string } }) {
   const article = articles[params.slug as keyof typeof articles];
 
   if (!article) {
@@ -210,7 +205,7 @@ export default function BlogPost({ params }: PageProps) {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-pink-50 to-blue-50">
+    <div className="min-h-screen bg-gradient-to-br from-white to-gray-100">
       {/* Hero Section */}
       <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -333,24 +328,24 @@ export default function BlogPost({ params }: PageProps) {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-pink-600 to-purple-600">
+      <section className="py-20 bg-gradient-to-r from-[#cfc96e] to-[#f7b267]">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <h3 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Únete á nosa comunidade
           </h3>
-          <p className="text-xl text-pink-100 mb-8">
+          <p className="text-xl text-[#f7f6d9] mb-8">
             Forma parte dunha tribo que entende as túas necesidades
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
               href="/unete"
-              className="bg-white text-pink-600 font-semibold py-4 px-8 rounded-full hover:bg-gray-100 transition-colors duration-200"
+              className="bg-white text-[#f7b267] font-semibold py-4 px-8 rounded-full hover:bg-gray-100 transition-colors duration-200"
             >
               Asóciate Agora
             </Link>
             <Link 
               href="/actividades"
-              className="bg-transparent text-white font-semibold py-4 px-8 rounded-full border-2 border-white hover:bg-white hover:text-pink-600 transition-colors duration-200"
+              className="bg-transparent text-white font-semibold py-4 px-8 rounded-full border-2 border-white hover:bg-white hover:text-[#f7b267] transition-colors duration-200"
             >
               Ver Actividades
             </Link>

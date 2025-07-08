@@ -1,8 +1,8 @@
 import Link from "next/link";
-
+import React from "react";
 export default function Actividades() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-pink-50 to-blue-50">
+    <div className="min-h-screen bg-gradient-to-br from-white to-gray-100">
       {/* Hero Section */}
       <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -14,7 +14,7 @@ export default function Actividades() {
           </p>
         </div>
       </section>
-
+    
       {/* Reunións Section */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -52,7 +52,7 @@ export default function Actividades() {
             </div>
 
             {/* Horarios y ubicación */}
-            <div className="bg-gradient-to-br from-pink-50 to-blue-50 rounded-2xl p-8">
+            <div className="bg-gradient-to-br from-[var(--color-primary)] to-[var(--color-light)] rounded-2xl p-8">
               <h3 className="text-2xl font-bold text-gray-900 mb-6">
                 📍 Información práctica
               </h3>
@@ -115,8 +115,8 @@ export default function Actividades() {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="text-center p-8 rounded-2xl bg-gradient-to-br from-pink-50 to-pink-100">
-              <div className="w-16 h-16 bg-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+            <div className="text-center p-8 rounded-2xl bg-gradient-to-br from-[var(--color-primary)] to-[var(--color-light)] warm-shadow">
+              <div className="w-16 h-16 bg-[var(--color-primary)] rounded-full flex items-center justify-center mx-auto mb-6">
                 <span className="text-white text-2xl">👥</span>
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-4">
@@ -128,8 +128,8 @@ export default function Actividades() {
               </p>
             </div>
 
-            <div className="text-center p-8 rounded-2xl bg-gradient-to-br from-blue-50 to-blue-100">
-              <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
+            <div className="text-center p-8 rounded-2xl bg-gradient-to-br from-[var(--color-light)] to-[var(--color-primary-hover)] warm-shadow">
+              <div className="w-16 h-16 bg-[var(--color-primary-hover)] rounded-full flex items-center justify-center mx-auto mb-6">
                 <span className="text-white text-2xl">🎨</span>
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-4">
@@ -141,8 +141,8 @@ export default function Actividades() {
               </p>
             </div>
 
-            <div className="text-center p-8 rounded-2xl bg-gradient-to-br from-green-50 to-green-100">
-              <div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-6">
+            <div className="text-center p-8 rounded-2xl bg-gradient-to-br from-[var(--color-primary)] to-[var(--color-light)] warm-shadow">
+              <div className="w-16 h-16 bg-[var(--color-primary)] rounded-full flex items-center justify-center mx-auto mb-6">
                 <span className="text-white text-2xl">🌿</span>
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-4">
@@ -178,51 +178,13 @@ export default function Actividades() {
                 Reunións semanais
               </h3>
               <p className="text-lg text-gray-700 mb-6">
-                As reunións seguen sendo cada mércores con dous horarios dispoñibles.
+                
+              
               </p>
-              <div className="grid md:grid-cols-2 gap-6 max-w-2xl mx-auto">
-                <div className="bg-green-50 rounded-lg p-4">
-                  <h4 className="font-semibold text-green-800 mb-2">Reunión de Mañá</h4>
-                  <p className="text-green-700">10:30 - 12:30</p>
-                </div>
-                <div className="bg-red-50 rounded-lg p-4">
-                  <h4 className="font-semibold text-red-800 mb-2">Reunión de Tarde</h4>
-                  <p className="text-red-700">17:00 - 19:00</p>
-                </div>
-              </div>
-              <p className="text-sm text-gray-500 mt-4">
-                Estade atentos que co bo tempo seguramente fagamos algunha actividade o aire libre
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-pink-600 to-purple-600">
-        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-          <h3 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Únete ás nosas actividades
-          </h3>
-          <p className="text-xl text-pink-100 mb-8">
-            Ven a coñecernos e forma parte da nosa comunidade de apoio
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              href="/unete"
-              className="bg-white text-pink-600 font-semibold py-4 px-8 rounded-full hover:bg-gray-100 transition-colors duration-200"
-            >
-              Asóciate Agora
-            </Link>
-            <Link 
-              href="/contacto"
-              className="bg-transparent text-white font-semibold py-4 px-8 rounded-full border-2 border-white hover:bg-white hover:text-pink-600 transition-colors duration-200"
-            >
-              Pregunta Información
-            </Link>
-          </div>
-        </div>
+            </div> {/* cierre .text-center */}
+          </div> {/* cierre .bg-white... */}
+        </div> {/* cierre .max-w-7xl... */}
       </section>
     </div>
   );
-} 
+}

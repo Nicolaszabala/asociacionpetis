@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Contacto() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-pink-50 to-blue-50">
+    <div className="min-h-screen bg-gradient-to-br from-white to-gray-100">
       {/* Hero Section */}
       <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -20,14 +20,14 @@ export default function Contacto() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Información de contacto */}
-            <div className="bg-white rounded-2xl shadow-xl p-8">
+            <div className="bg-white rounded-2xl shadow-xl p-8 warm-shadow">
               <h2 className="text-3xl font-bold text-gray-900 mb-8">
                 Información de contacto
               </h2>
               
               <div className="space-y-8">
                 <div className="flex items-start">
-                  <div className="w-12 h-12 bg-pink-600 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                  <div className="w-12 h-12 bg-[var(--color-primary)] rounded-full flex items-center justify-center mr-4 flex-shrink-0">
                     <span className="text-white text-xl">📍</span>
                   </div>
                   <div>
@@ -43,7 +43,7 @@ export default function Contacto() {
                 </div>
 
                 <div className="flex items-start">
-                  <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                  <div className="w-12 h-12 bg-[var(--color-primary-hover)] rounded-full flex items-center justify-center mr-4 flex-shrink-0">
                     <span className="text-white text-xl">📅</span>
                   </div>
                   <div>
@@ -59,7 +59,7 @@ export default function Contacto() {
                 </div>
 
                 <div className="flex items-start">
-                  <div className="w-12 h-12 bg-green-600 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                  <div className="w-12 h-12 bg-[var(--color-primary)] rounded-full flex items-center justify-center mr-4 flex-shrink-0">
                     <span className="text-white text-xl">📧</span>
                   </div>
                   <div>
@@ -67,7 +67,7 @@ export default function Contacto() {
                       Email
                     </h3>
                     <p className="text-gray-700">
-                      <a href="mailto:info@asociacionpetis.org" className="text-pink-600 hover:text-pink-700">
+                      <a href="mailto:info@asociacionpetis.org" className="text-[var(--color-primary)] hover:text-[var(--color-primary-hover)]">
                         info@asociacionpetis.org
                       </a>
                     </p>
@@ -75,7 +75,7 @@ export default function Contacto() {
                 </div>
 
                 <div className="flex items-start">
-                  <div className="w-12 h-12 bg-purple-600 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                  <div className="w-12 h-12 bg-[var(--color-primary)] rounded-full flex items-center justify-center mr-4 flex-shrink-0">
                     <span className="text-white text-xl">📱</span>
                   </div>
                   <div>
@@ -91,7 +91,7 @@ export default function Contacto() {
             </div>
 
             {/* Formulario de contacto */}
-            <div className="bg-white rounded-2xl shadow-xl p-8">
+            <div className="bg-white rounded-2xl shadow-xl p-8 warm-shadow">
               <h2 className="text-3xl font-bold text-gray-900 mb-8">
                 Envíanos unha mensaxe
               </h2>
@@ -224,24 +224,24 @@ export default function Contacto() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-pink-600 to-purple-600">
+      <section className="py-20 bg-gradient-to-r from-[var(--color-primary)] to-[var(--color-light)]">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <h3 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Ven a coñecernos
           </h3>
-          <p className="text-xl text-pink-100 mb-8">
+          <p className="text-xl text-[#f7f6d9] mb-8">
             A mellor forma de coñecernos é asistir a unha das nosas reunións
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
               href="/actividades"
-              className="bg-white text-pink-600 font-semibold py-4 px-8 rounded-full hover:bg-gray-100 transition-colors duration-200"
+              className="bg-white text-[var(--color-primary)] font-semibold py-4 px-8 rounded-full hover:bg-[var(--color-primary-hover)] hover:border-[var(--color-primary-hover)] transition-colors border-2 border-[var(--color-primary)] btn-pulse"
             >
               Ver Actividades
             </Link>
             <Link 
               href="/unete"
-              className="bg-transparent text-white font-semibold py-4 px-8 rounded-full border-2 border-white hover:bg-white hover:text-pink-600 transition-colors duration-200"
+              className="bg-[var(--color-primary)] text-white font-semibold py-4 px-8 rounded-full hover:bg-[var(--color-primary-hover)] hover:border-[var(--color-primary-hover)] transition-colors border-2 border-[var(--color-primary)] btn-pulse"
             >
               Únete á Asociación
             </Link>
