@@ -2,7 +2,7 @@ import Link from "next/link";
 import React from "react";
 export default function Actividades() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-white to-gray-100">
+    <div className="min-h-screen bg-gradient-to-br from-light to-accent">
       {/* Hero Section */}
       <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -52,7 +52,7 @@ export default function Actividades() {
             </div>
 
             {/* Horarios y ubicación */}
-            <div className="bg-gradient-to-br from-[var(--color-primary)] to-[var(--color-light)] rounded-2xl p-8">
+            <div className="bg-gradient-to-br from-light to-accent rounded-2xl p-8">
               <h3 className="text-2xl font-bold text-gray-900 mb-6">
                 📍 Información práctica
               </h3>
@@ -115,8 +115,8 @@ export default function Actividades() {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="text-center p-8 rounded-2xl bg-gradient-to-br from-[var(--color-primary)] to-[var(--color-light)] warm-shadow">
-              <div className="w-16 h-16 bg-[var(--color-primary)] rounded-full flex items-center justify-center mx-auto mb-6">
+            <div className="text-center p-8 rounded-2xl bg-gradient-to-br from-light to-accent warm-shadow">
+              <div className="w-16 h-16 bg-[var(--color-accent)] rounded-full flex items-center justify-center mx-auto mb-6">
                 <span className="text-white text-2xl">👥</span>
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-4">
@@ -126,10 +126,13 @@ export default function Actividades() {
                 Reunións semanais cada mércores con dous horarios: mañá (10:30-12:30) 
                 e tarde (17:00-19:00) para adaptarse ás necesidades de cada familia.
               </p>
+              <button className="mt-6 bg-white text-[var(--color-accent)] font-semibold py-3 px-8 rounded-full hover:bg-[var(--color-accent)] hover:text-white transition-colors border-2 border-[var(--color-accent)]">
+                Ver próximas reunións
+              </button>
             </div>
 
-            <div className="text-center p-8 rounded-2xl bg-gradient-to-br from-[var(--color-light)] to-[var(--color-primary-hover)] warm-shadow">
-              <div className="w-16 h-16 bg-[var(--color-primary-hover)] rounded-full flex items-center justify-center mx-auto mb-6">
+            <div className="text-center p-8 rounded-2xl bg-gradient-to-br from-light to-accent warm-shadow">
+              <div className="w-16 h-16 bg-[var(--color-accent)] rounded-full flex items-center justify-center mx-auto mb-6">
                 <span className="text-white text-2xl">🎨</span>
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-4">
@@ -141,8 +144,8 @@ export default function Actividades() {
               </p>
             </div>
 
-            <div className="text-center p-8 rounded-2xl bg-gradient-to-br from-[var(--color-primary)] to-[var(--color-light)] warm-shadow">
-              <div className="w-16 h-16 bg-[var(--color-primary)] rounded-full flex items-center justify-center mx-auto mb-6">
+            <div className="text-center p-8 rounded-2xl bg-gradient-to-br from-light to-accent warm-shadow">
+              <div className="w-16 h-16 bg-[var(--color-accent)] rounded-full flex items-center justify-center mx-auto mb-6">
                 <span className="text-white text-2xl">🌿</span>
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-4">
@@ -172,7 +175,7 @@ export default function Actividades() {
           <div className="bg-white rounded-2xl shadow-xl p-8">
             <div className="text-center">
               <div className="w-16 h-16 bg-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
-                <span className="text-white text-2xl">📅</span>
+                <span className="text-gray-900 text-2xl">📅</span>
               </div>
               <h3 className="text-2xl font-bold text-gray-900 mb-4">
                 Reunións semanais

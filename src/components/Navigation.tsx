@@ -46,7 +46,7 @@ export default function Navigation() {
             </Link>
             <Link 
               href="/unete" 
-              className="bg-[var(--color-primary)] text-white px-4 py-2 rounded-full border-2 border-[var(--color-primary)] hover:bg-[var(--color-primary-hover)] hover:border-[var(--color-primary-hover)] transition-colors btn-pulse"
+              className="bg-[var(--color-accent)] text-white px-4 py-2 rounded-full border-2 border-[var(--color-accent)] hover:bg-primary-hover hover:border-primary-hover transition-colors btn-pulse"
             >
               Únete
             </Link>

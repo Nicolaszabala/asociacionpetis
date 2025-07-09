@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Contacto() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-white to-gray-100">
+    <div className="min-h-screen bg-gradient-to-br from-light to-accent">
       {/* Hero Section */}
       <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -27,7 +27,7 @@ export default function Contacto() {
               
               <div className="space-y-8">
                 <div className="flex items-start">
-                  <div className="w-12 h-12 bg-[var(--color-primary)] rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                  <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center mr-4 flex-shrink-0">
                     <span className="text-white text-xl">📍</span>
                   </div>
                   <div>
@@ -43,7 +43,7 @@ export default function Contacto() {
                 </div>
 
                 <div className="flex items-start">
-                  <div className="w-12 h-12 bg-[var(--color-primary-hover)] rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                  <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center mr-4 flex-shrink-0">
                     <span className="text-white text-xl">📅</span>
                   </div>
                   <div>
@@ -59,7 +59,7 @@ export default function Contacto() {
                 </div>
 
                 <div className="flex items-start">
-                  <div className="w-12 h-12 bg-[var(--color-primary)] rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                  <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center mr-4 flex-shrink-0">
                     <span className="text-white text-xl">📧</span>
                   </div>
                   <div>
@@ -67,7 +67,7 @@ export default function Contacto() {
                       Email
                     </h3>
                     <p className="text-gray-700">
-                      <a href="mailto:info@asociacionpetis.org" className="text-[var(--color-primary)] hover:text-[var(--color-primary-hover)]">
+                      <a href="mailto:info@asociacionpetis.org" className="text-accent hover:text-primary-hover">
                         info@asociacionpetis.org
                       </a>
                     </p>
@@ -75,7 +75,7 @@ export default function Contacto() {
                 </div>
 
                 <div className="flex items-start">
-                  <div className="w-12 h-12 bg-[var(--color-primary)] rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                  <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center mr-4 flex-shrink-0">
                     <span className="text-white text-xl">📱</span>
                   </div>
                   <div>
@@ -156,7 +156,7 @@ export default function Contacto() {
 
                 <button
                   type="submit"
-                  className="w-full bg-pink-600 text-white font-semibold py-4 px-8 rounded-lg hover:bg-pink-700 transition-colors duration-200"
+                  className="w-full bg-white text-[var(--color-accent)] font-semibold py-4 px-8 rounded-lg hover:bg-[var(--color-accent)] hover:text-white transition-colors border-2 border-[var(--color-accent)] btn-pulse"
                 >
                   Enviar mensaxe
                 </button>
@@ -224,24 +224,24 @@ export default function Contacto() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-[var(--color-primary)] to-[var(--color-light)]">
+      <section className="py-20 bg-gradient-to-r from-light to-accent">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-          <h3 className="text-3xl md:text-4xl font-bold text-white mb-6">
+          <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
             Ven a coñecernos
           </h3>
-          <p className="text-xl text-[#f7f6d9] mb-8">
+          <p className="text-xl text-gray-800 mb-8">
             A mellor forma de coñecernos é asistir a unha das nosas reunións
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
               href="/actividades"
-              className="bg-white text-[var(--color-primary)] font-semibold py-4 px-8 rounded-full hover:bg-[var(--color-primary-hover)] hover:border-[var(--color-primary-hover)] transition-colors border-2 border-[var(--color-primary)] btn-pulse"
+              className="bg-white text-[var(--color-accent)] font-semibold py-4 px-8 rounded-full hover:bg-[var(--color-accent)] hover:text-white transition-colors border-2 border-[var(--color-accent)] btn-pulse"
             >
               Ver Actividades
             </Link>
             <Link 
               href="/unete"
-              className="bg-[var(--color-primary)] text-white font-semibold py-4 px-8 rounded-full hover:bg-[var(--color-primary-hover)] hover:border-[var(--color-primary-hover)] transition-colors border-2 border-[var(--color-primary)] btn-pulse"
+              className="bg-white text-[var(--color-accent)] font-semibold py-4 px-8 rounded-full hover:bg-[var(--color-accent)] hover:text-white transition-colors border-2 border-[var(--color-accent)] btn-pulse"
             >
               Únete á Asociación
             </Link>

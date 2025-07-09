@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function SobreNos() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-white to-gray-100">
+    <div className="min-h-screen bg-gradient-to-br from-light to-accent">
       {/* Hero Section */}
       <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -46,7 +46,7 @@ export default function SobreNos() {
           <div className="grid md:grid-cols-2 gap-12">
             {/* Misión */}
             <div className="text-center">
-              <div className="w-20 h-20 bg-[var(--color-primary)] rounded-full flex items-center justify-center mx-auto mb-6">
+              <div className="w-20 h-20 bg-accent rounded-full flex items-center justify-center mx-auto mb-6">
                 <span className="text-white text-3xl">🎯</span>
               </div>
               <h3 className="text-2xl font-bold text-gray-900 mb-4">A nosa misión</h3>
@@ -59,25 +59,25 @@ export default function SobreNos() {
 
             {/* Valores */}
             <div className="text-center">
-              <div className="w-20 h-20 bg-[var(--color-primary-hover)] rounded-full flex items-center justify-center mx-auto mb-6">
+              <div className="w-20 h-20 bg-accent rounded-full flex items-center justify-center mx-auto mb-6">
                 <span className="text-white text-3xl">💝</span>
               </div>
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Os nosos valores</h3>
               <ul className="text-lg text-gray-700 space-y-2 text-left">
                 <li className="flex items-center">
-                  <span className="text-[var(--color-primary-hover)] mr-2">•</span>
+                  <span className="text-accent mr-2">•</span>
                   <strong>Empatía:</strong> Comprender e acompañar cada experiencia única
                 </li>
                 <li className="flex items-center">
-                  <span className="text-[var(--color-primary-hover)] mr-2">•</span>
+                  <span className="text-accent mr-2">•</span>
                   <strong>Respeto:</strong> Valorar cada decisión e estilo de crianza
                 </li>
                 <li className="flex items-center">
-                  <span className="text-[var(--color-primary-hover)] mr-2">•</span>
+                  <span className="text-accent mr-2">•</span>
                   <strong>Comunidade:</strong> Crear lazos e apoios entre familias
                 </li>
                 <li className="flex items-center">
-                  <span className="text-[var(--color-primary-hover)] mr-2">•</span>
+                  <span className="text-accent mr-2">•</span>
                   <strong>Inclusión:</strong> Acolher a todas as familias sen xulgar
                 </li>
               </ul>
@@ -100,7 +100,7 @@ export default function SobreNos() {
 
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-white rounded-2xl p-8 shadow-lg">
-              <div className="w-16 h-16 bg-[var(--color-primary)] rounded-full flex items-center justify-center mx-auto mb-6">
+              <div className="w-16 h-16 bg-accent rounded-full flex items-center justify-center mx-auto mb-6">
                 <span className="text-white text-2xl">👥</span>
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-4 text-center">
@@ -113,7 +113,7 @@ export default function SobreNos() {
             </div>
 
             <div className="bg-white rounded-2xl p-8 shadow-lg">
-              <div className="w-16 h-16 bg-[var(--color-primary-hover)] rounded-full flex items-center justify-center mx-auto mb-6">
+              <div className="w-16 h-16 bg-accent rounded-full flex items-center justify-center mx-auto mb-6">
                 <span className="text-white text-2xl">🎨</span>
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-4 text-center">
@@ -126,7 +126,7 @@ export default function SobreNos() {
             </div>
 
             <div className="bg-white rounded-2xl p-8 shadow-lg">
-              <div className="w-16 h-16 bg-[var(--color-primary)] rounded-full flex items-center justify-center mx-auto mb-6">
+              <div className="w-16 h-16 bg-accent rounded-full flex items-center justify-center mx-auto mb-6">
                 <span className="text-white text-2xl">🌿</span>
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-4 text-center">
@@ -142,25 +142,25 @@ export default function SobreNos() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-[var(--color-primary)] to-[var(--color-light)]">
+      <section className="py-20 bg-gradient-to-r from-light to-accent">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-          <h3 className="text-3xl md:text-4xl font-bold text-white mb-6">
+          <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
             Únete á nosa comunidade
           </h3>
-          <p className="text-xl text-[var(--color-primary-hover)] mb-8">
+          <p className="text-xl text-gray-800 mb-8">
             Forma parte dunha tribo que entende as túas necesidades e te apoia 
             en cada paso da crianza.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
               href="/unete"
-              className="bg-[var(--color-primary)] text-white font-semibold py-4 px-8 rounded-full hover:bg-[var(--color-primary-hover)] hover:border-[var(--color-primary-hover)] transition-colors border-2 border-[var(--color-primary)]"
+              className="bg-white text-[var(--color-accent)] font-semibold py-4 px-8 rounded-full hover:bg-[var(--color-accent)] hover:text-white transition-colors duration-200 border-2 border-[var(--color-accent)]"
             >
               Asóciate Agora
             </Link>
             <Link 
               href="/contacto"
-              className="bg-white text-[var(--color-primary)] font-semibold py-4 px-8 rounded-full hover:bg-[var(--color-primary-hover)] hover:border-[var(--color-primary-hover)] transition-colors border-2 border-[var(--color-primary)]"
+              className="bg-white text-[var(--color-accent)] font-semibold py-4 px-8 rounded-full hover:bg-[var(--color-accent)] hover:text-white transition-colors duration-200 border-2 border-[var(--color-accent)]"
             >
               Contacta Conosco
             </Link>
