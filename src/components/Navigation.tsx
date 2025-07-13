@@ -49,7 +49,7 @@ export default function Navigation() {
             </Link>
             <Link 
               href="/unete" 
-              className="bg-[var(--color-accent)] text-white px-4 py-2 rounded-full border-2 border-[var(--color-accent)] hover:bg-primary-hover hover:border-primary-hover transition-colors btn-pulse"
+              className="bg-[var(--color-accent)] text-white px-4 py-2 rounded-full border-2 border-[var(--color-accent)] hover:bg-primary-hover hover:border-primary-hover transition-colors btn-glow"
             >
               Únete
             </Link>
@@ -113,7 +113,7 @@ export default function Navigation() {
               </Link>
               <Link 
                 href="/unete" 
-                className="block px-3 py-2 bg-[var(--color-primary)] text-white rounded-md border-2 border-[var(--color-primary)] hover:bg-[var(--color-primary-hover)] hover:border-[var(--color-primary-hover)] transition-colors btn-pulse"
+                className="block px-3 py-2 bg-[var(--color-primary)] text-white rounded-md border-2 border-[var(--color-primary)] hover:bg-[var(--color-primary-hover)] hover:border-[var(--color-primary-hover)] transition-colors btn-glow"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Únete

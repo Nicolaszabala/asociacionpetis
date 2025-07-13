@@ -21,7 +21,7 @@ export default function Blog() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
             <div className="md:flex">
-              <div className="relative w-full h-64 bg-gradient-to-br from-primary to-light flex items-center justify-center overflow-hidden md:w-1/2">
+              <div className="relative w-full h-64 bg-gradient-to-br from-primary to-light flex items-center justify-center overflow-hidden md:w-1/2 fade-in-image">
                 <Image
                   src="/blog/reunion-outubro.jpg"
                   alt="Reunións Outubro - A tribo está de volta!"
@@ -75,7 +75,7 @@ export default function Blog() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Post 1 */}
             <article className="bg-white rounded-2xl border border-primary overflow-hidden hover:shadow-lg transition-shadow duration-200 warm-shadow">
-              <div className="relative w-full h-48 bg-gradient-to-br from-primary to-light flex items-center justify-center overflow-hidden">
+              <div className="relative w-full h-48 bg-gradient-to-br from-primary to-light flex items-center justify-center overflow-hidden fade-in-image">
                 <Image
                   src="/blog/reunion-setembro.jpg"
                   alt="Reunións Setembro"
@@ -106,7 +106,7 @@ export default function Blog() {
 
             {/* Post 2 */}
             <article className="bg-white rounded-2xl border border-primary overflow-hidden hover:shadow-lg transition-shadow duration-200 warm-shadow">
-              <div className="relative w-full h-48 bg-gradient-to-br from-primary to-light flex items-center justify-center overflow-hidden">
+              <div className="relative w-full h-48 bg-gradient-to-br from-primary to-light flex items-center justify-center overflow-hidden fade-in-image">
                 <Image
                   src="/blog/nosas-reunions.jpg"
                   alt="As nosas reunións"
@@ -138,7 +138,7 @@ export default function Blog() {
 
             {/* Post 3 */}
             <article className="bg-white rounded-2xl border border-primary overflow-hidden hover:shadow-lg transition-shadow duration-200 warm-shadow">
-              <div className="relative w-full h-48 bg-gradient-to-br from-primary to-light flex items-center justify-center overflow-hidden">
+              <div className="relative w-full h-48 bg-gradient-to-br from-primary to-light flex items-center justify-center overflow-hidden fade-in-image">
                 <Image
                   src="/blog/reunions-xullo.jpg"
                   alt="Reunións Xullo"
@@ -170,7 +170,7 @@ export default function Blog() {
 
             {/* Post 4 */}
             <article className="bg-white rounded-2xl border border-primary overflow-hidden hover:shadow-lg transition-shadow duration-200 warm-shadow">
-              <div className="relative w-full h-48 bg-gradient-to-br from-primary to-light flex items-center justify-center overflow-hidden">
+              <div className="relative w-full h-48 bg-gradient-to-br from-primary to-light flex items-center justify-center overflow-hidden fade-in-image">
                 <Image
                   src="/blog/ruta-lerez-picnic.jpg"
                   alt="Ruta Lerez + Picnic"
@@ -202,7 +202,7 @@ export default function Blog() {
 
             {/* Post 5 */}
             <article className="bg-white rounded-2xl border border-primary overflow-hidden hover:shadow-lg transition-shadow duration-200 warm-shadow">
-              <div className="relative w-full h-48 bg-gradient-to-br from-primary to-light flex items-center justify-center overflow-hidden">
+              <div className="relative w-full h-48 bg-gradient-to-br from-primary to-light flex items-center justify-center overflow-hidden fade-in-image">
                 <Image
                   src="/blog/reunions-xuno.jpg"
                   alt="Reunións Xuño"
@@ -234,7 +234,7 @@ export default function Blog() {
 
             {/* Post 6 */}
             <article className="bg-white rounded-2xl border border-primary overflow-hidden hover:shadow-lg transition-shadow duration-200 warm-shadow">
-              <div className="relative w-full h-48 bg-gradient-to-br from-primary to-light flex items-center justify-center overflow-hidden">
+              <div className="relative w-full h-48 bg-gradient-to-br from-primary to-light flex items-center justify-center overflow-hidden fade-in-image">
                 <Image
                   src="/blog/reunions-maio.jpg"
                   alt="Reunións Maio"

@@ -344,7 +344,7 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
             {/* Article Image */}
-            <div className="relative w-full h-64 bg-gradient-to-br from-pink-100 to-blue-100 flex items-center justify-center">
+            <div className="relative w-full h-64 bg-gradient-to-br from-pink-100 to-blue-100 flex items-center justify-center fade-in-image">
               {article.imageUrl ? (
                 <Image
                   src={article.imageUrl}
@@ -396,7 +396,7 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
               .slice(0, 3)
               .map(([slug, article]) => (
                 <article key={slug} className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-200">
-                  <div className="relative w-full h-48 bg-gradient-to-br from-pink-100 to-blue-100 flex items-center justify-center">
+                  <div className="relative w-full h-48 bg-gradient-to-br from-pink-100 to-blue-100 flex items-center justify-center fade-in-image">
                     {article.imageUrl ? (
                       <Image
                         src={article.imageUrl}

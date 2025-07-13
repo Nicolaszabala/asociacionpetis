@@ -36,7 +36,7 @@ export default function Home() {
               </div>
             </div>
             <div className="relative">
-              <div className="relative h-96 lg:h-[400px] rounded-2xl overflow-hidden shadow-2xl">
+              <div className="relative h-96 lg:h-[400px] rounded-2xl overflow-hidden shadow-2xl fade-in-image">
                 <Image
                   src="/portada_petis.jpg"
                   alt="Foto de familias de la Asociación Petís en un picnic al aire libre"
