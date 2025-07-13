@@ -38,6 +38,9 @@ export default function Navigation() {
             <Link href="/actividades" className="text-gray-700 hover:text-[var(--color-primary-hover)] transition-colors menu-underline">
               Actividades
             </Link>
+            <Link href="/doazons" className="text-gray-700 hover:text-[var(--color-primary-hover)] transition-colors menu-underline">
+                Doazóns
+            </Link>
             <Link href="/blog" className="text-gray-700 hover:text-[var(--color-primary-hover)] transition-colors menu-underline">
               Blog
             </Link>

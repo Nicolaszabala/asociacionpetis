@@ -1,6 +1,43 @@
+"use client";
+
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import Image from "next/image";
+
+// Componente para los botones de compartir (Client Component)
+function ShareButtons({ title }: { title: string }) {
+  const shareUrl = typeof window !== 'undefined' ? window.location.href : '';
+  
+  return (
+    <div className="flex space-x-4">
+      <a 
+        href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}`}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+      >
+        Facebook
+      </a>
+      <a 
+        href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(title)}&url=${encodeURIComponent(shareUrl)}`}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="bg-black text-white px-4 py-2 rounded-lg hover:bg-gray-800 transition-colors"
+      >
+        X
+      </a>
+      <a 
+        href={`https://wa.me/?text=${encodeURIComponent(title + ' - ' + shareUrl)}`}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-colors"
+      >
+        WhatsApp
+      </a>
+    </div>
+  );
+}
 
 // Datos de los artículos (esto vendrá de Drupal en el futuro)
 const articles = {
@@ -8,6 +45,9 @@ const articles = {
     title: "Reunións Outubro - A tribo está de volta!",
     date: "Outubro 2024",
     category: "Reunións",
+    excerpt: "A tribo está de volta! Retomamos as nosas reunións de crianza para compartir experiencias, inquedanzas e moito apoio!", 
+    image: "",
+    imageUrl: "/blog/reunion-outubro.jpg", 
     content: `
       <p class="text-lg text-gray-700 mb-6 leading-relaxed">
         🌿✨ A tribo está de volta! ✨🌿 Despois dun pequeno descanso, retomamos as nosas 
@@ -32,13 +72,12 @@ const articles = {
         Esperámosvos con moita ilusión para seguir crecendo xuntos como tribo! 💕
       </p>
     `,
-    excerpt: "A tribo está de volta! Retomamos as nosas reunións de crianza para compartir experiencias, inquedanzas e moito apoio!",
-    image: "🌿✨"
   },
   "reunions-setembro": {
     title: "Reunións Setembro",
     date: "Setembro 2024",
     category: "Reunións",
+    imageUrl: "/blog/reunion-setembro.jpg", 
     content: `
       <p class="text-lg text-gray-700 mb-6 leading-relaxed">
         Adiantamos as datas das reunións que temos previstas para o mes de Setembro de 2024.
@@ -59,37 +98,123 @@ const articles = {
     excerpt: "Adiantamos as datas das reunións que temos previstas para o mes de Setembro de 2024.",
     image: "📅"
   },
+  "nosas-reunions": {
+    title: "As nosas reunións",
+    date: "15 Xullo 2024",
+    category: "Reunións",
+    imageUrl: "/blog/nosas-reunions.jpg", 
+    content: `
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        As reunións da tribo seguen sendo momentos que nos impulsan e motivan para seguir adiante. 
+        É xenial que cada mércores, semana a semana desde fai máis dun ano, teñamos a oportunidade de 
+        abrazarnos, compartir, emocionarnos, chorar, rir e descubrir outras experiencias de maternidade.
+      </p>
+      
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        Mentres, por suposto, as nosas petises gozan xuntas. Sempre máxicas e sempre sorprendentes.
+      </p>
+      
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        Se ti estas dubidando ou coñeces a nais (ou futuras nais) con ganas de crear rede nun lugar seguro, 
+        sempre vos estamos esperando, mamás e petises!
+      </p>
+      
+      <p class="text-lg text-gray-700 leading-relaxed">
+        Este mércores non dispoñemos de espacio para vernos pero esperámosvos o mércores 24 de 17:00 a 19:00 
+        na Casa Azul (Rúa Sor Lucí, 4). Se tes algunha dúbida non dubides en contactar con nós por mensaxe 
+        privado ou no noso mail asociacionpetis@gmail.com
+      </p>
+    `,
+    excerpt: "As reunións da tribo seguen sendo momentos que nos impulsan e motivan para seguir adiante. É xenial que cada mércores, semana a semana desde fai máis dun ano, teñamos a oportunidade de abrazarnos, compartir, emocionarnos, chorar, rir e descubrir outras experiencias de maternidade.",
+    image: "🤗"
+  },
+  "reunions-xuno": {
+    title: "Reunións Xuño",
+    date: "Xuño 2024",
+    category: "Reunións",
+    imageUrl: "/blog/reunions-xuno.jpg", 
+    content: `
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        Adiantamos as datas das reunións que temos previstas para o mes de Xuño de 2024.
+      </p>
+      
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        Recordade que as reunións son na Sala Valdecorvos na Casa Azul, no concello de Pontevedra.
+      </p>
+      
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        En cor verde as reunións de mañá de 10:30 a 12:30 e en cor vermella as reunións 
+        de tarde de 17:00 a 19:00 horas.
+      </p>
+      
+      <p class="text-lg text-gray-700 leading-relaxed">
+        Esperámosvos con moita ilusión para seguir compartindo experiencias e apoios 
+        neste mes de xuño tan especial! 🌞
+      </p>
+    `,
+    excerpt: "Adiantamos as datas das reunións que temos previstas para o mes de Xuño de 2024. En cor verde as reunións de mañá de 10:30 a 12:30 e en cor vermella as reunións de tarde de 17:00 a 19:00 horas.",
+    image: "📋"
+  },
+  "reunions-xullo": {
+    title: "Reunións Xullo",
+    date: "1 Xullo 2024",
+    category: "Reunións",
+    imageUrl: "/blog/reunions-xullo.jpg", 
+    content: `
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        Adiantamos as datas das reunións que temos previstas para o mes de Xullo de 2024.
+      </p>
+      
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        Recordade que as reunións son na Sala Valdecorvos na Casa Azul, no concello de Pontevedra.
+      </p>
+      
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        Esperámosvos con moita ilusión para seguir compartindo experiencias e apoios.
+      </p>
+      
+      <p class="text-lg text-gray-700 leading-relaxed">
+        Estade atentos que co bo tempo seguramente fagamos algunha actividade ao aire libre.
+      </p>
+    `,
+    excerpt: "Adiantamos as datas das reunións que temos previstas para o mes de Xullo de 2024. Recordade que as reunións son na Sala Valdecorvos na Casa Azul, no concello de Pontevedra. Estade atentos que co bo tempo seguramente fagamos algunha actividade ao aire libre.",
+    image: "📅"
+  },
   "ruta-lerez-picnic": {
     title: "Ruta Lerez + Picnic",
-    date: "Xullo 2024",
+    date: "29 Maio 2024",
     category: "Actividades ao Aire Libre",
+    imageUrl: "/blog/ruta-lerez-picnic.jpg", 
     content: `
       <p class="text-lg text-gray-700 mb-6 leading-relaxed">
         Ola familias! Con este bo tempo apetece xuntarse e desfrutar cas crianzas ao aire libre.
       </p>
       
       <p class="text-lg text-gray-700 mb-6 leading-relaxed">
-        Así que vos propoñemos un plan para este domingo: un paseo polo río Lerez para abrir 
+        Así que vos propoñemos un plan para oeste domingo: un paseo polo río Lerez para abrir 
         o apetito e facer xuntas un picnic na praia fluvial.
       </p>
       
       <p class="text-lg text-gray-700 mb-6 leading-relaxed">
-        O lugar de quedada é na praia fluvial do Río Lerez (Avenida Bos Aires) e a hora 
-        será sobre as 12:00 do mediodía.
+        📍 Punto de encontro: Praza da Ferrería, 12:00h
+      </p>
+      
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        🥪 Cada familia trae o seu picnic e compartimos experiencias e risas.
       </p>
       
       <p class="text-lg text-gray-700 leading-relaxed">
-        Traede algo para compartir e moita ilusión para disfrutar dunha mañá marabillosa 
-        en familia! 🌿☀️
+        Non esquezas traer protector solar, gorras e moita auga! 🌞💧
       </p>
     `,
-    excerpt: "Con este bo tempo apetece xuntarse e desfrutar cas crianzas ao aire libre. Un paseo polo río Lerez para abrir o apetito e facer xuntas un picnic na praia fluvial.",
-    image: "🌿"
+    excerpt: "Ola familias! Con este bo tempo apetece xuntarse e desfrutar cas crianzas ao aire libre. Así que vos propoñemos un plan para este domingo: un paseo polo río Lerez para abrir o apetito e facer xuntas un picnic na praia fluvial.",
+    image: "🌳"
   },
   "novo-curso": {
     title: "Continuamos nun novo curso",
     date: "Setembro 2024",
     category: "Novidades",
+    imageUrl: "/blog/novo-curso.jpg", 
     content: `
       <p class="text-lg text-gray-700 mb-6 leading-relaxed">
         Péchase un curso e comezamos outro. Facémolo cheas de ilusións, forzas renovadas 
@@ -114,37 +239,11 @@ const articles = {
     excerpt: "Péchase un curso e comezamos outro. Facémolo cheas de ilusións, forzas renovadas e moitas ganas de seguir acompañando ás familias.",
     image: "🎓"
   },
-  "nosas-reunions": {
-    title: "As nosas reunións",
-    date: "Xaneiro 2024",
-    category: "Reunións",
-    content: `
-      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
-        As reunións da tribo seguen sendo momentos que nos impulsan e motivan para seguir adiante.
-      </p>
-      
-      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
-        É xenial que cada mércores, semana a semana desde fai máis dun ano, teñamos a 
-        oportunidade de abrazarnos, compartir, emocionarnos, chorar, rir e descubrir 
-        outras experiencias de maternidade.
-      </p>
-      
-      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
-        Mentres, por suposto, as nosas petís gozan xuntas. Sempre máxicas e siempre sorprendentes.
-      </p>
-      
-      <p class="text-lg text-gray-700 leading-relaxed">
-        Grazas a todas as familias que fan posible estes momentos tan especiais. 
-        A nosa tribo é realmente marabillosa! 🤗💕
-      </p>
-    `,
-    excerpt: "As reunións da tribo seguen sendo momentos que nos impulsan e motivan para seguir adiante. É xenial que cada mércores, semana a semana desde fai máis dun ano, teñamos a oportunidade de abrazarnos, compartir, emocionarnos, chorar, rir e descubrir outras experiencias de maternidade.",
-    image: "🤗"
-  },
   "benvido-asociacion": {
     title: "Benvido á asociación!",
     date: "Xaneiro 2024",
     category: "Novidades",
+    imageUrl: "/blog/benvido-asociacion.jpg", 
     content: `
       <p class="text-lg text-gray-700 mb-6 leading-relaxed">
         Tiñamos ganas, forzas e ilusión. Tiñamos a necesidade dunha tribo. 
@@ -168,32 +267,6 @@ const articles = {
     `,
     excerpt: "Tiñamos ganas, forzas e ilusión. Tiñamos a necesidade dunha tribo. Tiñamos un grupo de petises con coidadores desexando compartir emocións e experiencias.",
     image: "👋"
-  },
-  "reunions-xuno": {
-    title: "Reunións Xuño",
-    date: "Xuño 2024",
-    category: "Reunións",
-    content: `
-      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
-        Adiantamos as datas das reunións que temos previstas para o mes de Xuño de 2024.
-      </p>
-      
-      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
-        Recordade que as reunións son na Sala Valdecorvos na Casa Azul, no concello de Pontevedra.
-      </p>
-      
-      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
-        En cor verde as reunións de mañá de 10:30 a 12:30 e en cor vermella as reunións 
-        de tarde de 17:00 a 19:00 horas.
-      </p>
-      
-      <p class="text-lg text-gray-700 leading-relaxed">
-        Esperámosvos con moita ilusión para seguir compartindo experiencias e apoios 
-        neste mes de xuño tan especial! 🌞
-      </p>
-    `,
-    excerpt: "Adiantamos as datas das reunións que temos previstas para o mes de Xuño de 2024. En cor verde as reunións de mañá de 10:30 a 12:30 e en cor vermella as reunións de tarde de 17:00 a 19:00 horas.",
-    image: "📋"
   }
 };
 
@@ -244,11 +317,19 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
             {/* Article Image */}
-            <div className="h-64 bg-gradient-to-br from-pink-100 to-blue-100 flex items-center justify-center">
-              <div className="text-center">
+            <div className="relative w-full h-64 bg-gradient-to-br from-pink-100 to-blue-100 flex items-center justify-center">
+              {article.imageUrl ? (
+                <Image
+                  src={article.imageUrl}
+                  alt={article.title}
+                  fill
+                  className="object-cover rounded-xl"
+                  style={{ objectFit: "cover" }}
+                />
+              ) : (
                 <div className="text-8xl mb-4">{article.image}</div>
-                <p className="text-gray-600">Imaxe do artigo</p>
-              </div>
+              )}
+              <p className="absolute bottom-2 left-1/2 -translate-x-1/2 text-gray-600"> </p>
             </div>
             
             {/* Article Body */}
@@ -263,17 +344,7 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
                 <h3 className="text-lg font-semibold text-gray-900 mb-4">
                   Comparte este artigo
                 </h3>
-                <div className="flex space-x-4">
-                  <button className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">
-                    Facebook
-                  </button>
-                  <button className="bg-blue-400 text-white px-4 py-2 rounded-lg hover:bg-blue-500 transition-colors">
-                    Twitter
-                  </button>
-                  <button className="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-colors">
-                    WhatsApp
-                  </button>
-                </div>
+                <ShareButtons title={article.title} />
               </div>
             </div>
           </div>
@@ -298,11 +369,19 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
               .slice(0, 3)
               .map(([slug, article]) => (
                 <article key={slug} className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-200">
-                  <div className="h-48 bg-gradient-to-br from-pink-100 to-blue-100 flex items-center justify-center">
-                    <div className="text-center">
+                  <div className="relative w-full h-48 bg-gradient-to-br from-pink-100 to-blue-100 flex items-center justify-center">
+                    {article.imageUrl ? (
+                      <Image
+                        src={article.imageUrl}
+                        alt={article.title}
+                        fill
+                        className="object-cover rounded-xl"
+                        style={{ objectFit: "cover" }}
+                      />
+                    ) : (
                       <div className="text-4xl mb-2">{article.image}</div>
-                      <p className="text-sm text-gray-600">Imaxe do artigo</p>
-                    </div>
+                    )}
+                    <p className="absolute bottom-2 left-1/2 -translate-x-1/2 text-gray-600 text-xs"></p>
                   </div>
                   <div className="p-6">
                     <div className="flex items-center text-sm text-gray-500 mb-3">
