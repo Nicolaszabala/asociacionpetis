@@ -130,7 +130,7 @@ const articles = {
   },
   "reunions-xuno": {
     title: "Reunións Xuño",
-    date: "Xuño 2024",
+    date: "21 Marzo 2024",
     category: "Reunións",
     imageUrl: "/blog/reunions-xuno.jpg", 
     content: `
@@ -152,8 +152,35 @@ const articles = {
         neste mes de xuño tan especial! 🌞
       </p>
     `,
-    excerpt: "Adiantamos as datas das reunións que temos previstas para o mes de Xuño de 2024. En cor verde as reunións de mañá de 10:30 a 12:30 e en cor vermella as reunións de tarde de 17:00 a 19:00 horas.",
+    excerpt: "Adiantamos as datas das reunións que temos previstas para o mes de Xuño de 2024. Recordade que as reunións son na Sala Valdecorvos na Casa Azul, no concello de Pontevedra. En cor verde as reunións de mañá de 10:30 a 12:30 e en cor vermella as reunións de tarde.",
     image: "📋"
+  },
+  "reunions-maio": {
+    title: "Reunións Maio",
+    date: "21 Marzo 2024",
+    category: "Reunións",
+    imageUrl: "/blog/reunions-maio.jpg", 
+    content: `
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        Adiantamos as datas das reunións que temos previstas para o mes de Maio de 2024.
+      </p>
+      
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        Recordade que as reunións son na Sala Valdecorvos na Casa Azul, no concello de Pontevedra.
+      </p>
+      
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        En cor verde as reunións de mañá de 10:30 a 12:30 e en cor vermella as reunións 
+        de tarde de 17:00 a 19:00 horas.
+      </p>
+      
+      <p class="text-lg text-gray-700 leading-relaxed">
+        Esperámosvos con moita ilusión para seguir compartindo experiencias e apoios 
+        neste mes de maio tan especial! 🌸
+      </p>
+    `,
+    excerpt: "Adiantamos as datas das reunións que temos previstas para o mes de Maio de 2024. Recordade que as reunións son na Sala Valdecorvos na Casa Azul, no concello de Pontevedra. En cor verde as reunións de mañá de 10:30 a 12:30 e en cor vermella as reunións de tarde.",
+    image: "📅"
   },
   "reunions-xullo": {
     title: "Reunións Xullo",
