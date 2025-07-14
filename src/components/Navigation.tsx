@@ -98,6 +98,13 @@ export default function Navigation() {
                 Actividades
               </Link>
               <Link 
+                href="/doazons" 
+                className="block px-3 py-2 text-gray-700 hover:text-[var(--color-primary-hover)] transition-colors menu-underline"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Doazóns
+              </Link>
+              <Link 
                 href="/blog" 
                 className="block px-3 py-2 text-gray-700 hover:text-[var(--color-primary-hover)] transition-colors menu-underline"
                 onClick={() => setIsMenuOpen(false)}

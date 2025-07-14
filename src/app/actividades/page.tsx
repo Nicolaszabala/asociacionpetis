@@ -9,9 +9,20 @@ export default function Actividades() {
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             Actividades
           </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Reunións, obradoiros e actividades para familias
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-6">
+            Estamos nun breve receso de verán ☀️. En setembro volverán as reunións presenciais e as actividades da tribo Petís.<br />
+            Síguenos en Instagram para estar ao día das novidades e do regreso:
           </p>
+          <div className="flex justify-center mt-6">
+            <a
+              href="https://www.instagram.com/a.petis/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-[var(--color-accent)] text-white font-semibold py-4 px-8 rounded-full hover:bg-primary-hover hover:border-primary-hover transition-colors border-2 border-[var(--color-accent)] btn-glow"
+            >
+              Mantente informado en Instagram
+            </a>
+          </div>
         </div>
       </section>
     

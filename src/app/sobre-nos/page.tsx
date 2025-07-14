@@ -52,9 +52,9 @@ export default function SobreNos() {
       {/* Misión y Valores */}
       <section className="py-12 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 gap-12">
+          <div className="flex flex-col md:grid md:grid-cols-2 gap-12">
             {/* Misión */}
-            <div className="text-center">
+            <div className="text-center mb-12 md:mb-0">
               <div className="w-20 h-20 bg-accent rounded-full flex items-center justify-center mx-auto mb-6">
                 <span className="text-white text-3xl">🎯</span>
               </div>
@@ -72,7 +72,7 @@ export default function SobreNos() {
                 <span className="text-white text-3xl">💝</span>
               </div>
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Os nosos valores</h3>
-              <ul className="text-lg text-gray-700 space-y-2 text-left">
+              <ul className="text-lg text-gray-700 space-y-2 mx-auto max-w-xs sm:max-w-sm md:max-w-none text-left md:text-left">
                 <li className="flex items-center">
                   <span className="text-accent mr-2">•</span>
                   <strong>Empatía:</strong> Comprender e acompañar cada experiencia única

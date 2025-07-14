@@ -213,17 +213,48 @@ export default function Unete() {
               <p className="text-gray-300">
                 Apoio á crianza e á lactancia en Pontevedra
               </p>
-              <div className="mt-4 flex items-center space-x-4">
-                <a href="mailto:info@asociacionpetis.org" className="flex items-center hover:text-accent transition-colors">
-                  <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M16 12H8m8 0a4 4 0 11-8 0 4 4 0 018 0zm2 4v1a2 2 0 01-2 2H6a2 2 0 01-2-2v-1" /></svg>
+              <div className="mt-4 flex flex-col space-y-2">
+                {/* Mail */}
+                <a
+                  href="mailto:info@asociacionpetis.org"
+                  className="flex items-center justify-center md:justify-start hover:text-accent transition-colors"
+                  aria-label="Email"
+                >
+                  <svg className="w-6 h-6 mr-2" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                    <rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" strokeWidth="2"/>
+                    <path d="M3 7l9 6 9-6" stroke="currentColor" strokeWidth="2" fill="none"/>
+                  </svg>
                   info@asociacionpetis.org
                 </a>
-                <a href="https://www.instagram.com/a.petis/" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">
-                  <span className="sr-only">Instagram</span>
-                  <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                    <path d="M7.75 2A5.75 5.75 0 002 7.75v8.5A5.75 5.75 0 007.75 22h8.5A5.75 5.75 0 0022 16.25v-8.5A5.75 5.75 0 0016.25 2h-8.5zm0 1.5h8.5A4.25 4.25 0 0120.5 7.75v8.5a4.25 4.25 0 01-4.25 4.25h-8.5A4.25 4.25 0 013.5 16.25v-8.5A4.25 4.25 0 017.75 3.5zm4.25 2.25A6.25 6.25 0 1018.25 12 6.25 6.25 0 0012 5.75zm0 1.5A4.75 4.75 0 1116.75 12 4.75 4.75 0 0112 7.25zm6.5 1.25a1.25 1.25 0 11-1.25-1.25A1.25 1.25 0 0118.5 8.5z" />
-                  </svg>
-                </a>
+                {/* Redes sociales */}
+                <div className="flex items-center justify-center md:justify-start space-x-4">
+                  {/* Instagram */}
+                  <a
+                    href="https://www.instagram.com/a.petis/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-accent transition-colors"
+                    aria-label="Instagram"
+                  >
+                    <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24">
+                      <rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" strokeWidth="2"/>
+                      <circle cx="12" cy="12" r="5" stroke="currentColor" strokeWidth="2"/>
+                      <circle cx="17" cy="7" r="1.5" fill="currentColor"/>
+                    </svg>
+                  </a>
+                  {/* LinkedIn */}
+                  <a
+                    href="https://www.linkedin.com/company/petis-asociacion"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-accent transition-colors"
+                    aria-label="LinkedIn"
+                  >
+                    <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11 19h-3v-9h3v9zm-1.5-10.28c-.97 0-1.75-.79-1.75-1.75s.78-1.75 1.75-1.75 1.75.79 1.75 1.75-.78 1.75-1.75 1.75zm13.5 10.28h-3v-4.5c0-1.08-.02-2.47-1.5-2.47-1.5 0-1.73 1.17-1.73 2.39v4.58h-3v-9h2.89v1.23h.04c.4-.76 1.38-1.56 2.84-1.56 3.04 0 3.6 2 3.6 4.59v4.74z"/>
+                    </svg>
+                  </a>
+                </div>
               </div>
             </div>
             <div>
@@ -253,7 +284,7 @@ export default function Unete() {
             </div>
           </div>
           <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-            <p>&copy; 2024 Asociación Petís. Todos os dereitos reservados.</p>
+            <p className="text-xs">&copy; 2025 Asociación Petís. Todos os dereitos reservados.</p>
           </div>
         </div>
       </footer>
