@@ -10,8 +10,8 @@ export default function Actividades() {
             Actividades
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-6">
-            Estamos nun breve receso de verán ☀️. <br /> En setembro volverán as reunións presenciais e as actividades da tribo Petís.<br />
-            Síguenos en Instagram para estar ao día das novidades e do regreso:
+            Estamos nun breve receso de verán. En setembro volverán as reunións presenciais e as actividades da tribo Petís. Síguenos en Instagram para estar ao día das novidades!<br /><br />
+            A tribo Petís toma un pequeno descanso de verán ☀️. Durante estes meses non haberá reunións presenciais nin actividades, pero en setembro volveremos con máis forza, ilusión e ganas de compartir momentos xuntos.
           </p>
           <div className="flex justify-center mt-6">
             <a
