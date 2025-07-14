@@ -72,22 +72,34 @@ export default function SobreNos() {
                 <span className="text-white text-3xl">💝</span>
               </div>
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Os nosos valores</h3>
-              <ul className="text-lg text-gray-700 space-y-2 mx-auto max-w-xs sm:max-w-sm md:max-w-none text-left md:text-left">
-                <li className="flex items-center">
-                  <span className="text-accent mr-2">•</span>
-                  <strong>Empatía:</strong> Comprender e acompañar cada experiencia única
+              <ul className="text-lg text-gray-700 space-y-4 mx-auto max-w-xs sm:max-w-sm md:max-w-none text-left md:text-left">
+                <li className="flex items-start gap-2">
+                  <span className="text-accent mt-1">•</span>
+                  <div>
+                    <span className="font-bold text-gray-900">Empatía:</span>
+                    <span className="block text-gray-700">Comprender e acompañar cada experiencia única</span>
+                  </div>
                 </li>
-                <li className="flex items-center">
-                  <span className="text-accent mr-2">•</span>
-                  <strong>Respeto:</strong> Valorar cada decisión e estilo de crianza
+                <li className="flex items-start gap-2">
+                  <span className="text-accent mt-1">•</span>
+                  <div>
+                    <span className="font-bold text-gray-900">Respeto:</span>
+                    <span className="block text-gray-700">Valorar cada decisión e estilo de crianza</span>
+                  </div>
                 </li>
-                <li className="flex items-center">
-                  <span className="text-accent mr-2">•</span>
-                  <strong>Comunidade:</strong> Crear lazos e apoios entre familias
+                <li className="flex items-start gap-2">
+                  <span className="text-accent mt-1">•</span>
+                  <div>
+                    <span className="font-bold text-gray-900">Comunidade:</span>
+                    <span className="block text-gray-700">Crear lazos e apoios entre familias</span>
+                  </div>
                 </li>
-                <li className="flex items-center">
-                  <span className="text-accent mr-2">•</span>
-                  <strong>Inclusión:</strong> Acolher a todas as familias sen xulgar
+                <li className="flex items-start gap-2">
+                  <span className="text-accent mt-1">•</span>
+                  <div>
+                    <span className="font-bold text-gray-900">Inclusión:</span>
+                    <span className="block text-gray-700">Acolher a todas as familias sen xulgar</span>
+                  </div>
                 </li>
               </ul>
             </div>
