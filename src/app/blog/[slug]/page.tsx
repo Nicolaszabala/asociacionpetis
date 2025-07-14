@@ -40,7 +40,7 @@ function ShareButtons({ title }: { title: string }) {
 }
 
 // Datos de los artículos (esto vendrá de Drupal en el futuro)
-const articles = {
+export const articles = {
   "reunions-outubro": {
     title: "Reunións Outubro - A tribo está de volta!",
     date: "Outubro 2024",
@@ -237,63 +237,74 @@ const articles = {
     excerpt: "Ola familias! Con este bo tempo apetece xuntarse e desfrutar cas crianzas ao aire libre. Así que vos propoñemos un plan para este domingo: un paseo polo río Lerez para abrir o apetito e facer xuntas un picnic na praia fluvial.",
     image: "🌳"
   },
-  "novo-curso": {
-    title: "Continuamos nun novo curso",
-    date: "Setembro 2024",
+  
+  "grazas-faro-educa": {
+    title: "Grazas a El Faro Educa e Uxía Miranda",
+    date: "Martes 8 de abril de 2025",
     category: "Novidades",
-    imageUrl: "/blog/novo-curso.jpg", 
+    imageUrl: "/blog/faroeduca.jpg",
+    image: "",
+    excerpt: "Desde Petís queremos amosar o noso agradecemento máis fonda a Uxía Miranda e a todo o equipo de El Faro Educa, por poñer voz e mirada á nosa tribu na súa reportaxe.",
     content: `
       <p class="text-lg text-gray-700 mb-6 leading-relaxed">
-        Péchase un curso e comezamos outro. Facémolo cheas de ilusións, forzas renovadas 
-        e moitas ganas de seguir acompañando ás familias.
+        Desde Petís queremos amosar o noso agradecemento máis fonda a Uxía Miranda e a todo o equipo de El Faro Educa, por poñer voz e mirada á nosa tribu na súa reportaxe <a href="https://lnkd.in/dq9D-bqE" target="_blank" rel="noopener noreferrer" class="text-pink-600 underline">«Criar en tribu, criar mellor: Te das cuenta de que no estás sola»</a>.
       </p>
-      
       <p class="text-lg text-gray-700 mb-6 leading-relaxed">
-        O curso pasado foi marabilloso, con moitas familias novas que se uniron á nosa 
-        comunidade e moitas experiencias compartidas que nos fixeron crecer como tribo.
+        Para nós, que loitamos cada semana por tecer redes de apoio, ver reflectida a nosa realidade e a importancia de criarmos xuntas é un regalo enorme. Grazas por achegar o noso labor a tantas familias que, quizais, hoxe se dean conta de que non están soas.
       </p>
-      
       <p class="text-lg text-gray-700 mb-6 leading-relaxed">
-        Para este novo curso temos moitas novidades preparadas: novos obradoiros, 
-        actividades ao aire libre, e por suposto, as nosas queridas reunións semanais.
+        Seguiremos a criar, a acompañar e a escoitar, porque cada crianza merece unha tribu e cada nai merece sentirse arroupada.
       </p>
-      
+      <ul class="mb-6">
+        <li class="mb-2">💚 Grazas de corazón, Uxía e El Faro Educa.</li>
+        <li class="mb-2">💚 Grazas ás familias que facedes Petís posible.</li>
+        <li class="mb-2">💚 Grazas aos concellos de Pontevedra e Sanxenxo por abrirnos as portas.</li>
+      </ul>
       <p class="text-lg text-gray-700 leading-relaxed">
-        Grazas a todas as familias que forman parte desta comunidade tan especial. 
-        Xuntos seguimos crecendo! 💕
+        Seguimos! ✨
       </p>
-    `,
-    excerpt: "Péchase un curso e comezamos outro. Facémolo cheas de ilusións, forzas renovadas e moitas ganas de seguir acompañando ás familias.",
-    image: "🎓"
+    `
   },
-  "benvido-asociacion": {
-    title: "Benvido á asociación!",
-    date: "Xaneiro 2024",
+  "tribo-salnes-portonovo": {
+    title: "Regresamos de Portonovo co corazón cheeeeo cheíño de amor ❤️‍🩹",
+    date: "17 de marzo de 2025",
     category: "Novidades",
-    imageUrl: "/blog/benvido-asociacion.jpg", 
+    imageUrl: "/blog/portonovo.jpg",
+    image: "",
+    excerpt: "A tribo do Salnés é xa unha realidade e fainos moi felices saber que haberá un espacio aberto para a crianza doutro lado da ría.",
     content: `
       <p class="text-lg text-gray-700 mb-6 leading-relaxed">
-        Tiñamos ganas, forzas e ilusión. Tiñamos a necesidade dunha tribo. 
-        Tiñamos un grupo de petises con coidadores desexando compartir emocións e experiencias.
+        Que chula foi a tarde de hoxe de terapia e de sinceridade, de mapaternidades de todos os tipos imaxinables e de moito, moitísimo cariño e comprensión 💝
       </p>
-      
       <p class="text-lg text-gray-700 mb-6 leading-relaxed">
-        Así nace Petís, o teu espazo seguro en Pontevedra para que nunca máis 
-        te sintas soa, insegura ou xulgada.
+        A tribo do Salnés é xa unha realidade e fainos moi felices saber que haberá un espacio aberto para a crianza doutro lado da ría.
       </p>
-      
       <p class="text-lg text-gray-700 mb-6 leading-relaxed">
-        Somos unha asociación de apoio á crianza e á lactancia que nace da necesidade 
-        de crear unha comunidade de apoio para familias con crianzas pequenas.
+        💞 Sen vós nada desto sería posible: G R A Z A S a cada familia que nos apoia incondicionalmente, a aquelas que fixeron o esforzo de vir a coñecernos e a todas as que están por vir!
       </p>
-      
+    `
+  },
+  "receso-veran-2025": {
+    title: "Receso de verán: voltamos en setembro!",
+    date: "14 de xullo de 2025",
+    category: "Novidades",
+    imageUrl: "/blog/veran.jpg",
+    image: "☀️",
+    excerpt: "Estamos nun breve receso de verán. En setembro volverán as reunións presenciais e as actividades da tribo Petís. Síguenos en Instagram para estar ao día das novidades!",
+    content: `
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        A tribo Petís toma un pequeno descanso de verán ☀️. Durante estes meses non haberá reunións presenciais nin actividades, pero en setembro volveremos con máis forza, ilusión e ganas de compartir momentos xuntos.
+      </p>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        Grazas a todas as familias que facedes posible esta comunidade de apoio, comprensión e acompañamento. O verán é tempo de descanso, de desfrutar das crianzas e de recargar enerxía para seguir tecendo rede.
+      </p>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+        Síguenos en <a href="https://www.instagram.com/a.petis/" target="_blank" rel="noopener noreferrer" class="text-pink-600 underline">Instagram</a> para estar ao día das novidades e do regreso das actividades.
+      </p>
       <p class="text-lg text-gray-700 leading-relaxed">
-        Benvidos todos á nosa tribo! Estamos aquí para acompañarvos en cada paso 
-        da vosa aventura de crianza. 💕
+        Bo verán, tribo! Vémonos en setembro ��
       </p>
-    `,
-    excerpt: "Tiñamos ganas, forzas e ilusión. Tiñamos a necesidade dunha tribo. Tiñamos un grupo de petises con coidadores desexando compartir emocións e experiencias.",
-    image: "👋"
+    `
   }
 };
 
