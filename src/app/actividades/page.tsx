@@ -286,9 +286,9 @@ export default function Actividades() {
       <div>
         <h5 className="font-semibold mb-4">Legal</h5>
         <ul className="space-y-2 text-gray-300">
-          <li><a href="/legal" className="hover:text-white">Aviso Legal</a></li>
-          <li><a href="/privacidade" className="hover:text-white">Política de Privacidade</a></li>
-          <li><a href="/cookies" className="hover:text-white">Política de Cookies</a></li>
+          <li><a href="/legal-notice" className="hover:text-white">Aviso Legal</a></li>
+          <li><a href="/privacy-policy" className="hover:text-white">Política de Privacidade</a></li>
+          <li><a href="/cookie-policy" className="hover:text-white">Política de Cookies</a></li>
         </ul>
       </div>
     </div>

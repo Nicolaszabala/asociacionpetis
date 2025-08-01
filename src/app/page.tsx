@@ -207,9 +207,9 @@ export default function Home() {
       <div>
         <h5 className="font-semibold mb-4">Legal</h5>
         <ul className="space-y-2 text-gray-300">
-          <li><Link href="/legal" className="hover:text-white">Aviso Legal</Link></li>
-          <li><Link href="/privacidade" className="hover:text-white">Política de Privacidade</Link></li>
-          <li><Link href="/cookies" className="hover:text-white">Política de Cookies</Link></li>
+          <li><Link href="/legal-notice" className="hover:text-white">Aviso Legal</Link></li>
+          <li><Link href="/privacy-policy" className="hover:text-white">Política de Privacidade</Link></li>
+          <li><Link href="/cookie-policy" className="hover:text-white">Política de Cookies</Link></li>
         </ul>
       </div>
     </div>
