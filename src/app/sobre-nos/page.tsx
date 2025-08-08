@@ -98,7 +98,7 @@ export default function SobreNos() {
                   <span className="text-accent mt-1">•</span>
                   <div>
                     <span className="font-bold text-gray-900">Inclusión:</span>
-                    <span className="block text-gray-700">Acolher a todas as familias sen xulgar</span>
+                    <span className="block text-gray-700">Acoller a todas as familias sen xulgar</span>
                   </div>
                 </li>
               </ul>

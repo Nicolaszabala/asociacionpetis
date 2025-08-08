@@ -102,8 +102,7 @@ export default function Home() {
               </div>
               <h4 className="text-xl font-semibold text-text-main mb-4">Obradoiros</h4>
               <p className="text-text-secondary">
-                Actividades educativas e lúdicas para familias, desde talleres de 
-                crianza ata actividades creativas cos petís.
+                 Actividades educativas e lúdicas para familias, dende talleres de crianza ata actividades creativas cos petises.
               </p>
             </div>
             

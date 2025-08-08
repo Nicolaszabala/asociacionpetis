@@ -26,21 +26,6 @@ export default function Contacto() {
               </h2>
               
               <div className="space-y-8">
-                <div className="flex items-start">
-                  <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center mr-4 flex-shrink-0">
-                    <span className="text-white text-xl">📍</span>
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                      Onde nos atopas
-                    </h3>
-                    <p className="text-gray-700">
-                      <strong>Espazo de Momentos</strong><br />
-                      Rúa Alfredo García Alen, 6<br />
-                      36002 Pontevedra
-                    </p>
-                  </div>
-                </div>
 
                 <div className="flex items-start">
                   <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center mr-4 flex-shrink-0">
@@ -52,8 +37,8 @@ export default function Contacto() {
                     </h3>
                     <div className="text-gray-700">
                       <p><strong>Mércores:</strong></p>
-                      <p>Mañá: 10:30 - 12:30</p>
-                      <p>Tarde: 17:00 - 19:00</p>
+                      <p>Pontevedra: Mércores 17:00 - 19:00</p>
+                      <p>O Salnés: Martes 17:00 - 18:45</p>
                     </div>
                   </div>
                 </div>
@@ -194,9 +179,7 @@ export default function Contacto() {
                 ¿Podo levar os meus fillos ás reunións?
               </h3>
               <p className="text-gray-700">
-                Por suposto! As reunións están pensadas para que as familias 
-                poidan asistir xuntas. Os petís gozan xuntos mentres as familias 
-                comparten experiencias.
+              Por suposto! As reunións están pensadas para que as familias poidan asistir xuntas. Os petises gozan xuntos mentres as familias comparten experiencias.
               </p>
             </div>
 
@@ -206,7 +189,7 @@ export default function Contacto() {
               </h3>
               <p className="text-gray-700">
                 Non, a asociación é completamente gratuita. Non hai custos de 
-                asociación nin de participación nas actividades.
+                asociación nin de participación nas actividades.  Existe a posibilidade de acceder a certas vantaxes por ser socia de pago, unha modalidade na que se paga una cantidade fixa e anual por familia de maneira voluntaria e da acceso a descontos nalgunhas tendas de Pontevedra e acceso preferente aos obradoiros que ofrece a asociación. 
               </p>
             </div>
 

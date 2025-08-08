@@ -10,9 +10,8 @@ export default function Actividades() {
             Actividades
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-6">
-            Estamos nun breve receso de verán. En setembro volverán as reunións presenciais e as actividades da tribo Petís. Síguenos en Instagram para estar ao día das novidades!<br /><br />
-            A tribo Petís toma un pequeno descanso de verán ☀️. Durante estes meses non haberá reunións presenciais nin actividades, pero en setembro volveremos con máis forza, ilusión e ganas de compartir momentos xuntos.
-          </p>
+            Estamos nun breve receso de verán. En setembro volverán as reunións presenciais e as actividades da tribo Petís. Síguenos en Instagram para estar ao día das novidades!
+            </p>
           <div className="flex justify-center mt-6">
             <a
               href="https://www.instagram.com/a.petis/"
@@ -56,8 +55,7 @@ export default function Actividades() {
                   emocionarnos, chorar, rir e descubrir outras experiencias de maternidade.
                 </p>
                 <p className="text-lg text-gray-700 leading-relaxed">
-                  Mentres, por suposto, as nosas petís gozan xuntas. Sempre máxicas e 
-                  sempre sorprendentes.
+                Mentres, por suposto, os nosos petises gozan xuntos. Sempre máxicos e sempre sorprendentes.
                 </p>
               </div>
             </div>
@@ -75,12 +73,13 @@ export default function Actividades() {
                   </h4>
                   <div className="space-y-2">
                     <div className="flex items-center">
-                      <span className="text-green-600 font-semibold mr-2">Mañá:</span>
-                      <span className="text-gray-700">10:30 - 12:30</span>
+                      <span className="text-green-600 font-semibold mr-2">Pontevedra
+                      </span>
+                      <span className="text-gray-700"> Mércores 17:00 - 19:00</span>
                     </div>
                     <div className="flex items-center">
-                      <span className="text-red-600 font-semibold mr-2">Tarde:</span>
-                      <span className="text-gray-700">17:00 - 19:00</span>
+                      <span className="text-red-600 font-semibold mr-2">O Salnés</span>
+                      <span className="text-gray-700"> Martes 17:00 - 18:45</span>
                     </div>
                   </div>
                 </div>
@@ -90,9 +89,16 @@ export default function Actividades() {
                     📍 Onde?
                   </h4>
                   <p className="text-gray-700">
-                    <strong>Espazo de Momentos</strong><br />
-                    Rúa Alfredo García Alen, 6<br />
-                    36002 Pontevedra
+                    <strong>Pazo da Cultura de Pontevedra 
+                    </strong><br />
+                    Seminario 6, segundo andar
+                  </p>
+                </div>
+                <div>
+                  <p className="text-gray-700">
+                    <strong>Antigo Priorato de Arra
+                    </strong><br />
+                    Portonovo, Sanxenxo
                   </p>
                 </div>
 
@@ -103,7 +109,7 @@ export default function Actividades() {
                   <ul className="text-gray-700 space-y-1">
                     <li>• As reunións son abertas a todas as familias</li>
                     <li>• Non é necesario apuntarse previamente</li>
-                    <li>• Podes vir cos teus petís</li>
+                    <li>• Podes vir cos teus petises</li>
                     <li>• Ambiente acolledor e seguro</li>
                   </ul>
                 </div>
@@ -134,8 +140,7 @@ export default function Actividades() {
                 Reunións Regulares
               </h3>
               <p className="text-gray-700">
-                Reunións semanais cada mércores con dous horarios: mañá (10:30-12:30) 
-                e tarde (17:00-19:00) para adaptarse ás necesidades de cada familia.
+              Reunións semanais cada mércores en Pontevedra (17:00 - 19:00) e cada martes no Salnés (17:00 - 18:45)
               </p>
             
             </div>
@@ -161,8 +166,7 @@ export default function Actividades() {
                 Actividades ao Aire Libre
               </h3>
               <p className="text-gray-700">
-                Paseos, picnics e actividades na natureza para disfrutar en familia 
-                e crear lazos entre as crianzas.
+              Paseos, picnics e actividades na natureza para desfrutar en familia e crear lazos entre as crianzas.
               </p>
             </div>
           </div>
