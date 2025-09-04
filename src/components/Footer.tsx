@@ -81,7 +81,7 @@ export default function Footer() {
         {/* Línea divisoria */}
         <div className="mt-8 border-t border-gray-200 pt-8">
           <p className="text-center text-gray-500 text-sm">
-            © {new Date().getFullYear()} Asociación Petís. Todos los derechos reservados.
+            © {new Date().getFullYear()} Asociación Petís. Todos los derechos reservados. Creado por <a href="https://conexos.es" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-[var(--color-primary-hover)] transition-colors">Conexos</a>
           </p>
         </div>
       </div>

@@ -309,8 +309,8 @@ export default function Unete() {
             </div>
           </div>
           <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-            <p className="text-xs">&copy; 2025 Asociación Petís. Todos os dereitos reservados.</p>
-          </div>
+  <p className="text-xs">&copy; {new Date().getFullYear()} Asociación Petís. Todos los derechos reservados. Creado por <a href="https://conexos.es" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-[var(--color-primary-hover)] transition-colors">Conexos</a>
+          </p>          </div>
         </div>
       </footer>
     </div>
