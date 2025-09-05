@@ -1,6 +1,58 @@
+"use client";
 import Link from "next/link";
+import { useState } from "react";
 
 export default function Contacto() {
+  const [formData, setFormData] = useState({
+    nombre: '',
+    email: '',
+    asunto: '',
+    mensaxe: ''
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<'success' | 'error' | null>(null);
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitStatus(null);
+
+    try {
+      const response = await fetch('https://formspree.io/f/mnnbobyo', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setSubmitStatus('success');
+        setFormData({
+          nombre: '',
+          email: '',
+          asunto: '',
+          mensaxe: ''
+        });
+      } else {
+        setSubmitStatus('error');
+      }
+    } catch (error) {
+      console.error('Error:', error);
+      setSubmitStatus('error');
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-light to-accent">
       {/* Hero Section */}
@@ -26,7 +78,6 @@ export default function Contacto() {
               </h2>
               
               <div className="space-y-8">
-
                 <div className="flex items-start">
                   <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center mr-4 flex-shrink-0">
                     <span className="text-white text-xl">📅</span>
@@ -81,41 +132,66 @@ export default function Contacto() {
                 Envíanos unha mensaxe
               </h2>
               
-              <form className="space-y-6">
+              {/* Mensajes de estado */}
+              {submitStatus === 'success' && (
+                <div className="mb-6 p-4 bg-green-100 border border-green-400 text-green-700 rounded-lg">
+                  ¡Mensaxe enviada con éxito! Contactaremos contigo pronto.
+                </div>
+              )}
+              
+              {submitStatus === 'error' && (
+                <div className="mb-6 p-4 bg-red-100 border border-red-400 text-red-700 rounded-lg">
+                  Houbo un erro ao enviar a mensaxe. Por favor, inténtao de novo.
+                </div>
+              )}
+              
+              <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
                   <label htmlFor="nombre" className="block text-sm font-medium text-gray-700 mb-2">
-                    Nome completo
+                    Nome completo *
                   </label>
                   <input
                     type="text"
                     id="nombre"
                     name="nombre"
+                    value={formData.nombre}
+                    onChange={handleChange}
+                    required
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent"
                     placeholder="O teu nome"
+                    disabled={isSubmitting}
                   />
                 </div>
 
                 <div>
                   <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                    Email
+                    Email *
                   </label>
                   <input
                     type="email"
                     id="email"
                     name="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    required
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent"
                     placeholder="o.teu.email@exemplo.com"
+                    disabled={isSubmitting}
                   />
                 </div>
 
                 <div>
                   <label htmlFor="asunto" className="block text-sm font-medium text-gray-700 mb-2">
-                    Asunto
+                    Asunto *
                   </label>
                   <select
                     id="asunto"
                     name="asunto"
+                    value={formData.asunto}
+                    onChange={handleChange}
+                    required
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent"
+                    disabled={isSubmitting}
                   >
                     <option value="">Selecciona un asunto</option>
                     <option value="informacion">Información xeral</option>
@@ -128,23 +204,32 @@ export default function Contacto() {
 
                 <div>
                   <label htmlFor="mensaxe" className="block text-sm font-medium text-gray-700 mb-2">
-                    Mensaxe
+                    Mensaxe *
                   </label>
                   <textarea
                     id="mensaxe"
                     name="mensaxe"
+                    value={formData.mensaxe}
+                    onChange={handleChange}
+                    required
                     rows={5}
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent"
                     placeholder="Escribe a túa mensaxe aquí..."
+                    disabled={isSubmitting}
                   ></textarea>
                 </div>
 
                 <button
                   type="submit"
-                  className="w-full bg-white text-[var(--color-accent)] font-semibold py-4 px-8 rounded-lg hover:bg-[var(--color-accent)] hover:text-white transition-colors border-2 border-[var(--color-accent)] btn-pulse"
+                  disabled={isSubmitting}
+                  className="w-full bg-white text-[var(--color-accent)] font-semibold py-4 px-8 rounded-lg hover:bg-[var(--color-accent)] hover:text-white transition-colors border-2 border-[var(--color-accent)] btn-pulse disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  Enviar mensaxe
+                  {isSubmitting ? 'Enviando...' : 'Enviar mensaxe'}
                 </button>
+                
+                <p className="text-sm text-gray-500 text-center">
+                  * Campos obrigatorios
+                </p>
               </form>
             </div>
           </div>
@@ -234,88 +319,88 @@ export default function Contacto() {
 
       {/* Footer */}
       <footer className="bg-gray-900 text-white py-12">
-  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div className="grid md:grid-cols-4 gap-8">
-      <div>
-        <h4 className="text-xl font-semibold mb-4">Asociación Petís</h4>
-        <p className="text-gray-300">
-          Apoio á crianza e á lactancia en Pontevedra
-        </p>
-        <div className="mt-4 flex flex-col space-y-2">
-          {/* Mail */}
-          <a
-            href="mailto:info@asociacionpetis.org"
-            className="flex items-center justify-center md:justify-start hover:text-accent transition-colors"
-            aria-label="Email"
-          >
-            <svg className="w-6 h-6 mr-2" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-              <rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" strokeWidth="2"/>
-              <path d="M3 7l9 6 9-6" stroke="currentColor" strokeWidth="2" fill="none"/>
-            </svg>
-            info@asociacionpetis.org
-          </a>
-          {/* Redes sociales */}
-          <div className="flex items-center justify-center md:justify-start space-x-4">
-            {/* Instagram */}
-            <a
-              href="https://www.instagram.com/a.petis/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-accent transition-colors"
-              aria-label="Instagram"
-            >
-              <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24">
-                <rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" strokeWidth="2"/>
-                <circle cx="12" cy="12" r="5" stroke="currentColor" strokeWidth="2"/>
-                <circle cx="17" cy="7" r="1.5" fill="currentColor"/>
-              </svg>
-            </a>
-            {/* LinkedIn */}
-            <a
-              href="https://www.linkedin.com/company/petis-asociacion"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-accent transition-colors"
-              aria-label="LinkedIn"
-            >
-              <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11 19h-3v-9h3v9zm-1.5-10.28c-.97 0-1.75-.79-1.75-1.75s.78-1.75 1.75-1.75 1.75.79 1.75 1.75-.78 1.75-1.75 1.75zm13.5 10.28h-3v-4.5c0-1.08-.02-2.47-1.5-2.47-1.5 0-1.73 1.17-1.73 2.39v4.58h-3v-9h2.89v1.23h.04c.4-.76 1.38-1.56 2.84-1.56 3.04 0 3.6 2 3.6 4.59v4.74z"/>
-              </svg>
-            </a>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid md:grid-cols-4 gap-8">
+            <div>
+              <h4 className="text-xl font-semibold mb-4">Asociación Petís</h4>
+              <p className="text-gray-300">
+                Apoio á crianza e á lactancia en Pontevedra
+              </p>
+              <div className="mt-4 flex flex-col space-y-2">
+                {/* Mail */}
+                <a
+                  href="mailto:info@asociacionpetis.org"
+                  className="flex items-center justify-center md:justify-start hover:text-accent transition-colors"
+                  aria-label="Email"
+                >
+                  <svg className="w-6 h-6 mr-2" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                    <rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" strokeWidth="2"/>
+                    <path d="M3 7l9 6 9-6" stroke="currentColor" strokeWidth="2" fill="none"/>
+                  </svg>
+                  info@asociacionpetis.org
+                </a>
+                {/* Redes sociales */}
+                <div className="flex items-center justify-center md:justify-start space-x-4">
+                  {/* Instagram */}
+                  <a
+                    href="https://www.instagram.com/a.petis/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-accent transition-colors"
+                    aria-label="Instagram"
+                  >
+                    <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24">
+                      <rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" strokeWidth="2"/>
+                      <circle cx="12" cy="12" r="5" stroke="currentColor" strokeWidth="2"/>
+                      <circle cx="17" cy="7" r="1.5" fill="currentColor"/>
+                    </svg>
+                  </a>
+                  {/* LinkedIn */}
+                  <a
+                    href="https://www.linkedin.com/company/petis-asociacion"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-accent transition-colors"
+                    aria-label="LinkedIn"
+                  >
+                    <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11 19h-3v-9h3v9zm-1.5-10.28c-.97 0-1.75-.79-1.75-1.75s.78-1.75 1.75-1.75 1.75.79 1.75 1.75-.78 1.75-1.75 1.75zm13.5 10.28h-3v-4.5c0-1.08-.02-2.47-1.5-2.47-1.5 0-1.73 1.17-1.73 2.39v4.58h-3v-9h2.89v1.23h.04c.4-.76 1.38-1.56 2.84-1.56 3.04 0 3.6 2 3.6 4.59v4.74z"/>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div>
+              <h5 className="font-semibold mb-4">Enlaces</h5>
+              <ul className="space-y-2 text-gray-300">
+                <li><Link href="/sobre-nos" className="hover:text-white">Sobre nós</Link></li>
+                <li><Link href="/actividades" className="hover:text-white">Actividades</Link></li>
+                <li><Link href="/blog" className="hover:text-white">Blog</Link></li>
+                <li><Link href="/contacto" className="hover:text-white">Contacto</Link></li>
+              </ul>
+            </div>
+            <div>
+              <h5 className="font-semibold mb-4">Información</h5>
+              <ul className="space-y-2 text-gray-300">
+                <li><Link href="/unete" className="hover:text-white">Únete</Link></li>
+                <li><Link href="/actividades" className="hover:text-white">Próximas actividades</Link></li>
+                <li><Link href="/blog" className="hover:text-white">Últimas noticias</Link></li>
+              </ul>
+            </div>
+            <div>
+              <h5 className="font-semibold mb-4">Legal</h5>
+              <ul className="space-y-2 text-gray-300">
+                <li><Link href="/legal-notice" className="hover:text-white">Aviso Legal</Link></li>
+                <li><Link href="/privacy-policy" className="hover:text-white">Política de Privacidade</Link></li>
+                <li><Link href="/cookie-policy" className="hover:text-white">Política de Cookies</Link></li>
+              </ul>
+            </div>
+          </div>
+          <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+            <p className="text-xs">&copy; {new Date().getFullYear()} Asociación Petís. Todos los derechos reservados. Creado por <a href="https://conexos.es" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-[var(--color-primary-hover)] transition-colors">Conexos</a></p>
           </div>
         </div>
-      </div>
-      <div>
-        <h5 className="font-semibold mb-4">Enlaces</h5>
-        <ul className="space-y-2 text-gray-300">
-          <li><Link href="/sobre-nos" className="hover:text-white">Sobre nós</Link></li>
-          <li><Link href="/actividades" className="hover:text-white">Actividades</Link></li>
-          <li><Link href="/blog" className="hover:text-white">Blog</Link></li>
-          <li><Link href="/contacto" className="hover:text-white">Contacto</Link></li>
-        </ul>
-      </div>
-      <div>
-        <h5 className="font-semibold mb-4">Información</h5>
-        <ul className="space-y-2 text-gray-300">
-          <li><Link href="/unete" className="hover:text-white">Únete</Link></li>
-          <li><Link href="/actividades" className="hover:text-white">Próximas actividades</Link></li>
-          <li><Link href="/blog" className="hover:text-white">Últimas noticias</Link></li>
-        </ul>
-      </div>
-      <div>
-        <h5 className="font-semibold mb-4">Legal</h5>
-        <ul className="space-y-2 text-gray-300">
-          <li><Link href="/legal-notice" className="hover:text-white">Aviso Legal</Link></li>
-          <li><Link href="/privacy-policy" className="hover:text-white">Política de Privacidade</Link></li>
-          <li><Link href="/cookie-policy" className="hover:text-white">Política de Cookies</Link></li>
-        </ul>
-      </div>
-    </div>
-    <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-  <p className="text-xs">&copy; {new Date().getFullYear()} Asociación Petís. Todos los derechos reservados. Creado por <a href="https://conexos.es" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-[var(--color-primary-hover)] transition-colors">Conexos</a>
-          </p>    </div>
-  </div>
-</footer>
+      </footer>
     </div>
   );
-} 
+}
