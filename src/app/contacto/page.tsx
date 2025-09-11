@@ -222,8 +222,8 @@ export default function Contacto() {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full bg-white text-[var(--color-accent)] font-semibold py-4 px-8 rounded-lg hover:bg-[var(--color-accent)] hover:text-white transition-colors border-2 border-[var(--color-accent)] btn-pulse disabled:opacity-50 disabled:cursor-not-allowed"
-                >
+                  className="<w-full bg-white text-[var(--color-accent)] font-semibold py-4 px-8 rounded-lg hover:bg-[var(--color-accent)] hover:text-white transition-colors border-2 border-[var(--color-accent)] btn-pulse disabled:opacity-50 disabled:cursor-not-allowed">
+                
                   {isSubmitting ? 'Enviando...' : 'Enviar mensaxe'}
                 </button>
                 

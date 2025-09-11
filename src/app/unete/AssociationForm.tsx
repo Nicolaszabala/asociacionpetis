@@ -11,7 +11,7 @@ export default function AssociationForm() {
     const form = e.currentTarget;
     const data = Object.fromEntries(new FormData(form));
     try {
-      const res = await fetch("/api/unete", {
+      const res = await fetch("https://formspree.io/f/movnrore", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data),
@@ -99,9 +99,15 @@ export default function AssociationForm() {
           </div>
         </div>
       </div>
-      <button type="submit" disabled={loading} className="mt-8 w-full bg-accent text-white font-semibold py-4 px-8 rounded-lg hover:bg-primary-hover transition-colors border-2 border-accent disabled:opacity-60">
-        {loading ? "Enviando..." : "Enviar"}
-      </button>
+     
+<button
+  type="submit"
+  disabled={loading}
+  className="w-full bg-white text-[var(--color-accent)] font-semibold py-4 px-8 rounded-lg hover:bg-[var(--color-accent)] hover:text-white transition-colors border-2 border-[var(--color-accent)] btn-pulse disabled:opacity-50 disabled:cursor-not-allowed"
+>
+  {loading ? 'Enviando...' : 'Enviar mensaxe'}
+</button>
+
       {status === "success" && (
         <p className="text-green-600 text-center font-semibold mt-4">¡Tu mensaje fue enviado exitosamente!</p>
       )}
