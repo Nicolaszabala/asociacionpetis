@@ -1,5 +1,5 @@
 import Link from "next/link";
-import AssociationForm from "./AssociationForm";
+// import AssociationForm from "./AssociationForm";
 
 export default function Unete() {
   return (
@@ -106,18 +106,30 @@ export default function Unete() {
                   <div className="bg-gradient-to-br from-light to-accent rounded-lg p-6">
                     <h4 className="font-semibold text-gray-900 mb-2">4. Socia de Pago</h4>
                     <p className="text-gray-700">
-                    Existe a posibilidade de acceder a certas vantaxes por ser socia de pago, unha modalidade na que se paga una cantidade fixa e anual por familia de maneira voluntaria e da acceso a descontos nalgunhas tendas de Pontevedra e acceso preferente aos obradoiros que ofrece a asociación. 
+                    Existe a posibilidade de acceder a certas vantaxes por ser socia de pago, unha modalidade na que se paga una cantidade fixa e anual por familia de maneira voluntaria e da acceso a descontos nalgunhas tendas de Pontevedra e acceso preferente aos obradoiros que ofrece a asociación.
                     </p>
                   </div>
                 </div>
               </div>
+            </div>
+
+            {/* Botón centrado */}
+            <div className="mt-12 text-center">
+              <a
+                href="https://forms.gle/XCNhFb85aNrBpMgp6"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block bg-white text-[var(--color-accent)] font-semibold py-3 px-6 rounded-full hover:bg-[var(--color-accent)] hover:text-white transition-colors border-2 border-[var(--color-accent)] btn-pulse"
+              >
+                Únete
+              </a>
             </div>
           </div>
         </div>
       </section>
 
       {/* Formulario de asociación */}
-      <section className="py-20 bg-white">
+      {/* <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-white rounded-2xl shadow-xl p-8 warm-shadow">
             <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
@@ -126,7 +138,7 @@ export default function Unete() {
             <AssociationForm />
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Horarios de reuniones */}
       <section className="py-20 bg-white">
@@ -150,8 +162,8 @@ export default function Unete() {
               Reunións en Pontevedra
 
               </h3>
-              <p className="text-2xl font-bold text-gray-900 mb-2">17:00 - 19:00</p>
-              <p className="text-gray-700">Mércores</p>
+              <p className="text-2xl font-bold text-gray-900 mb-2">17:00 - 18:30</p>
+              <p className="text-gray-700"> Martes/Mércores alternos</p>
             </div>
           </div>
 
@@ -180,9 +192,10 @@ export default function Unete() {
             Reunións no Salnés
 
             </h3>
-            <p className="text-2xl font-bold text-gray-900 mb-2">17:00 - 19:00</p>
-            <p className="text-gray-700">Martes</p>
+            <p className="text-2xl font-bold text-gray-900 mb-2">17:00 - 18:30</p>
+            <p className="text-gray-700">Xoves (cada quince días)</p>
           </div>
+
           </div>
 
           <div className="mt-12 text-center">
@@ -195,11 +208,20 @@ export default function Unete() {
               Portonovo - Sanxenxo<br />
             </p>
             <p className="text-sm text-gray-500">
-              Non é necesario apuntarse previamente. Podes vir cos teus petises.
+              Non é necesario apuntarse previamente. Podes vir cos teus petises. 
             </p>
           </div>
           </div>
         </div>
+
+        <div className="bg-white rounded-2xl shadow-lg p-8 max-w-2xl mx-auto mt-12">
+          <div className="text-center">
+            <div className="text-lg text-gray-700 mb-4">
+              <p>¡Consulta días y localización cada mes en <a href="https://www.instagram.com/a.petis/ "target="blank"><strong>nuestro Instagram!</strong></a></p>
+            </div>
+          </div>
+        </div>
+          
       </section>
 
       {/* CTA Section */}

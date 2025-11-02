@@ -10,7 +10,7 @@ export default function Actividades() {
             Actividades
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-6">
-            Estamos nun breve receso de verán. En setembro volverán as reunións presenciais e as actividades da tribo Petís. Síguenos en Instagram para estar ao día das novidades!
+            Síguenos en Instagram e Linkedin para estar ao día das novidades!
             </p>
           <div className="flex justify-center mt-6">
             <a
@@ -50,9 +50,9 @@ export default function Actividades() {
                 </p>
                 <p className="text-lg text-gray-700 mb-6 leading-relaxed">
                   As reunións da tribo seguen sendo momentos que nos impulsan e motivan 
-                  para seguir adiante. É xenial que cada mércores, semana a semana desde 
+                  para seguir adiante. É xenial que semana a semana desde 
                   fai máis dun ano, teñamos a oportunidade de abrazarnos, compartir, 
-                  emocionarnos, chorar, rir e descubrir outras experiencias de maternidade.
+                  emocionarnos, chorar, rir e descubrir outras experiencias de maternidade e paternidade.
                 </p>
                 <p className="text-lg text-gray-700 leading-relaxed">
                 Mentres, por suposto, os nosos petises gozan xuntos. Sempre máxicos e sempre sorprendentes.
@@ -75,11 +75,12 @@ export default function Actividades() {
                     <div className="flex items-center">
                       <span className="text-green-600 font-semibold mr-2">Pontevedra
                       </span>
-                      <span className="text-gray-700"> Mércores 17:00 - 19:00</span>
+                      <span className="text-gray-700"> Martes/Mércores alternos 17:00 - 18:30</span>
                     </div>
                     <div className="flex items-center">
                       <span className="text-red-600 font-semibold mr-2">O Salnés</span>
-                      <span className="text-gray-700"> Martes 17:00 - 18:45</span>
+                      <span className="text-gray-700"> Xoves (cada quince días) 17:00 - 18:30 
+</span>
                     </div>
                   </div>
                 </div>
@@ -111,6 +112,7 @@ export default function Actividades() {
                     <li>• Non é necesario apuntarse previamente</li>
                     <li>• Podes vir cos teus petises</li>
                     <li>• Ambiente acolledor e seguro</li>
+                    <li>• Non é necesario estar asociado </li>
                   </ul>
                 </div>
               </div>
@@ -140,7 +142,8 @@ export default function Actividades() {
                 Reunións Regulares
               </h3>
               <p className="text-gray-700">
-              Reunións semanais cada mércores en Pontevedra (17:00 - 19:00) e cada martes no Salnés (17:00 - 18:45)
+              Reunións semanais cada Martes/Mércores alternos en Pontevedra (17:00 - 18:30) e cada Xoves (cada quince días)
+no Salnés (17:00 - 18:30)
               </p>
             
             </div>

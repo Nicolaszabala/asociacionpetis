@@ -106,6 +106,79 @@ export default function SobreNos() {
           </div>
         </div>
       </section>
+
+      {/* Directiva Section */}
+      <section className="py-12">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="bg-white rounded-2xl shadow-xl p-8 md:p-12 warm-shadow">
+            <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
+              A nosa directiva
+            </h2>
+
+            {/* Texto introducción */}
+            <div className="prose prose-lg max-w-none mb-12">
+              <p className="text-lg text-gray-700 leading-relaxed text-center">
+                Manter viva a comunidade Petís é unha grande responsabilidade e tamén unha honra para as que actualmente formamos a xunta directiva da asociación. O traballo das mulleres que nos precederon nesta labor foi moi grande e, moitas veces, invisible. Tomamos o relevo con ilusión e coa promesa de traballar intensamente para que as familias Petís sigan atopando nesta tribo un lugar seguro onde criar en rede.
+              </p>
+            </div>
+
+            {/* Miembros de la directiva */}
+            <div className="space-y-12">
+              {/* Aina */}
+              <div className="flex flex-col md:flex-row gap-6 items-center md:items-start">
+                <div className="flex-shrink-0">
+                  <img
+                    src="/AinaPetis.jpeg"
+                    alt="Aina - Tesorera de Petís"
+                    className="w-32 h-32 rounded-full object-cover"
+                  />
+                </div>
+                <div className="flex-1 text-center md:text-left">
+                  <h3 className="text-2xl font-bold text-gray-900 mb-2">Aina - Tesorera</h3>
+                  <p className="text-lg text-gray-700 leading-relaxed">
+                    Hola! Yo soy Aina, mamá de Alexandre, de profesión odontóloga y ahora también tesorera de Petís. Siempre quise casarme y ser mamá. Lo de casarse está bien pero no me pillan en otra, lo de maternar me está pareciendo el trabajo más difícil que he desempañado hasta la fecha. Así que, para ponérmelo más fácil, me animé a unirme a Petís y fue todo un acierto. Considero que es un privilegio contar con una asociación en nuestra ciudad que trabaje haciendo red para dar el apoyo que tanto necesita la crianza, y por eso estamos aquí. Gracias Petís.
+                  </p>
+                </div>
+              </div>
+
+              {/* Carlota */}
+              <div className="flex flex-col md:flex-row gap-6 items-center md:items-start">
+                <div className="flex-shrink-0">
+                  <img
+                    src="/CarlotaPetis.jpeg"
+                    alt="Carlota - Secretaria de Petís"
+                    className="w-32 h-32 rounded-full object-cover"
+                  />
+                </div>
+                <div className="flex-1 text-center md:text-left">
+                  <h3 className="text-2xl font-bold text-gray-900 mb-2">Carlota - Secretaria</h3>
+                  <p className="text-lg text-gray-700 leading-relaxed">
+                    Ola! Son Carlota, nai de André, historiadora da Arte, pedagoga e secretaria de Petís. Formo parte da tribo Petís desde que un día decidín presentarme nunha das suas reunións, co meu pequeno durmido no fular e a necesidade de facer fronte a un sentimento de soidade que non comprendía. Aquel día apenas falei, pero a calidez que alí atopei animoume a voltar, e hoxe sinto que toda familia merece o acompañamento e o cariño que esta comunidade é capaz de brindar.
+                  </p>
+                </div>
+              </div>
+
+              {/* Leticia */}
+              <div className="flex flex-col md:flex-row gap-6 items-center md:items-start">
+                <div className="flex-shrink-0">
+                  <img
+                    src="/LetiPetis.jpeg"
+                    alt="Leticia - Presidenta de Petís"
+                    className="w-32 h-32 rounded-full object-cover"
+                  />
+                </div>
+                <div className="flex-1 text-center md:text-left">
+                  <h3 className="text-2xl font-bold text-gray-900 mb-2">Leticia - Presidenta</h3>
+                  <p className="text-lg text-gray-700 leading-relaxed">
+                    Ola! Eu son Leti, investigadora e presidenta de Petís. Son nai dunha nena de case tres anos, que chegou despois de anos de búsqueda, probas e un embarazo complicado. Cando conseguimos ter a "Uxía" con nós, o apoio e consellos de profesionais actualizados e do grupo de lactancia e crianza (daquela Vila Láctea) foi chave para salvar a lactancia materna e navegar polo posparto con comprensión e escoita. Hoxe seguimos con lactancia e compartindo os altos e baixos da ma/paternidade co grupo. Petís é, foi e será parte da nosa historia, polo que faremos todo o posible porque algo tan importante non se perda.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <div className="text-center py-4">
          <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
             Síguenos en Instagram

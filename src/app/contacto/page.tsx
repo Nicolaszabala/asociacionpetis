@@ -87,9 +87,9 @@ export default function Contacto() {
                       Horarios de reunións
                     </h3>
                     <div className="text-gray-700">
-                      <p><strong>Mércores:</strong></p>
-                      <p>Pontevedra: Mércores 17:00 - 19:00</p>
-                      <p>O Salnés: Martes 17:00 - 18:45</p>
+                    
+                      <p>Pontevedra: 17:00-18:30 Martes/Mércores alternos</p>
+                      <p>O Salnés: 17:00-18:30 Xoves (cada quince días)</p>
                     </div>
                   </div>
                 </div>
@@ -118,9 +118,32 @@ export default function Contacto() {
                     <h3 className="text-lg font-semibold text-gray-900 mb-2">
                       Redes sociais
                     </h3>
-                    <p className="text-gray-700">
-                      Síguenos nas nosas redes sociais para estar ao día das nosas actividades
-                    </p>
+                    <div className="flex gap-4 mt-2">
+                      <a
+                        href="https://www.instagram.com/a.petis/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-2 text-accent hover:text-primary-hover transition-colors"
+                      >
+                        <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24">
+                          <rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" strokeWidth="2"/>
+                          <circle cx="12" cy="12" r="5" stroke="currentColor" strokeWidth="2"/>
+                          <circle cx="17" cy="7" r="1.5" fill="currentColor"/>
+                        </svg>
+                        Instagram
+                      </a>
+                      <a
+                        href="https://www.linkedin.com/company/petis-asociacion"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-2 text-accent hover:text-primary-hover transition-colors"
+                      >
+                        <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                          <path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11 19h-3v-9h3v9zm-1.5-10.28c-.97 0-1.75-.79-1.75-1.75s.78-1.75 1.75-1.75 1.75.79 1.75 1.75-.78 1.75-1.75 1.75zm13.5 10.28h-3v-4.5c0-1.08-.02-2.47-1.5-2.47-1.5 0-1.73 1.17-1.73 2.39v4.58h-3v-9h2.89v1.23h.04c.4-.76 1.38-1.56 2.84-1.56 3.04 0 3.6 2 3.6 4.59v4.74z"/>
+                        </svg>
+                        LinkedIn
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -273,8 +296,9 @@ export default function Contacto() {
                 ¿A asociación ten algún custo?
               </h3>
               <p className="text-gray-700">
-                Non, a asociación é completamente gratuita. Non hai custos de 
-                asociación nin de participación nas actividades.  Existe a posibilidade de acceder a certas vantaxes por ser socia de pago, unha modalidade na que se paga una cantidade fixa e anual por familia de maneira voluntaria e da acceso a descontos nalgunhas tendas de Pontevedra e acceso preferente aos obradoiros que ofrece a asociación. 
+               Non, a asociación é completamente gratuita. Non hai custo de asociación nin participación nas reunións e a comunidade. Os obradoiros organizados pola asociación sí precisan dunha aportación por parte das familias. 
+Porén, existe a modalidade de "socia de pago", o que permite ter acceso preferente aos obradoiros e gozar de vantaxes no comercio local.
+ 
               </p>
             </div>
 
@@ -283,8 +307,8 @@ export default function Contacto() {
                 ¿Como me poño en contacto con vos?
               </h3>
               <p className="text-gray-700">
-                Podes contactarnos por email, asistir a unha das nosas reunións 
-                ou usar o formulario de contacto desta páxina.
+                Podes poñerte en contacto por email (info@asociacionpetis.org), asistir a unha das nosas reunións, usar o formulario de contacto desta páxina ou directamente escribirnos ó teléfono da Asociación (meter número en canto teñamos a liña contratada).
+
               </p>
             </div>
           </div>

@@ -91,7 +91,7 @@ export default function Home() {
               </div>
               <h4 className="text-xl font-semibold text-text-main mb-4">Grupo de Apoio</h4>
               <p className="text-text-secondary">
-                Reunións semanais onde compartir experiencias, inquedanzas e moito apoio 
+                Reunións semanais en Pontevedra e o Salnés onde compartir experiencias, inquedanzas e moito apoio 
                 nun ambiente acolledor e seguro.
               </p>
             </div>
