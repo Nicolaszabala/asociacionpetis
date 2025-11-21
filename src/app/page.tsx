@@ -69,7 +69,7 @@ export default function Home() {
               Unha comunidade de apoio para familias con crianzas pequenas
             </p>
           </div>
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center p-8 rounded-2xl bg-white border border-accent warm-shadow">
               <div className="w-16 h-16 bg-accent rounded-full flex items-center justify-center mx-auto mb-6">
                 <div className="w-12 h-12 mx-auto mb-6 flex items-center justify-center bg-white rounded-full">
@@ -91,11 +91,11 @@ export default function Home() {
               </div>
               <h4 className="text-xl font-semibold text-text-main mb-4">Grupo de Apoio</h4>
               <p className="text-text-secondary">
-                Reunións semanais en Pontevedra e o Salnés onde compartir experiencias, inquedanzas e moito apoio 
+                Reunións semanais en Pontevedra e o Salnés onde compartir experiencias, inquedanzas e moito apoio
                 nun ambiente acolledor e seguro.
               </p>
             </div>
-            
+
             <div className="text-center p-8 rounded-2xl bg-white border border-accent warm-shadow">
               <div className="w-16 h-16 bg-accent rounded-full flex items-center justify-center mx-auto mb-6">
                 <span className="text-white text-2xl">✏️</span>
@@ -105,15 +105,25 @@ export default function Home() {
                  Actividades educativas e lúdicas para familias, dende talleres de crianza ata actividades creativas cos petises.
               </p>
             </div>
-            
+
             <div className="text-center p-8 rounded-2xl bg-white border border-accent warm-shadow">
               <div className="w-16 h-16 bg-accent rounded-full flex items-center justify-center mx-auto mb-6">
                 <span className="text-white text-2xl">🌿</span>
               </div>
               <h4 className="text-xl font-semibold text-text-main mb-4">Actividades ao Aire Libre</h4>
               <p className="text-text-secondary">
-                Paseos, picnics e actividades na natureza para disfrutar en familia 
+                Paseos, picnics e actividades na natureza para disfrutar en familia
                 e crear lazos entre as crianzas.
+              </p>
+            </div>
+
+            <div className="text-center p-8 rounded-2xl bg-white border border-accent warm-shadow">
+              <div className="w-16 h-16 bg-accent rounded-full flex items-center justify-center mx-auto mb-6">
+                <span className="text-white text-2xl">💬</span>
+              </div>
+              <h4 className="text-xl font-semibold text-text-main mb-4">Comunidade de WhatsApp</h4>
+              <p className="text-text-secondary">
+                Un espazo seguro no que poder estar en contacto con outras familias en calquera momento, para recibir apoio e consello, compartir información e sentir a tribo fóra das reunións presenciais. A comunidade conta con grupos temáticos (recomendacións médicas, lactancia, produtos de puericultura, sono infantil...).
               </p>
             </div>
           </div>

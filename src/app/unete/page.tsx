@@ -217,7 +217,7 @@ export default function Unete() {
         <div className="bg-white rounded-2xl shadow-lg p-8 max-w-2xl mx-auto mt-12">
           <div className="text-center">
             <div className="text-lg text-gray-700 mb-4">
-              <p>¡Consulta días y localización cada mes en <a href="https://www.instagram.com/a.petis/ "target="blank"><strong>nuestro Instagram!</strong></a></p>
+              <p>Consulta os días e os lugares de cada mes no <a href="https://www.instagram.com/a.petis/" target="_blank" rel="noopener noreferrer"><strong>noso Instagram!</strong></a></p>
             </div>
           </div>
         </div>

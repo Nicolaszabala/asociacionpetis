@@ -13,12 +13,10 @@ export default function DoazonsPage() {
             Grazas ao teu apoio, Petís pode seguir sendo un espazo seguro e acolledor para todas as familias.
           </p>
             <a
-            href="https://www.instagram.com/a.petis/?text=Hola!%20Me%20gustar%C3%ADa%20realizar%20una%20donaci%C3%B3n%20a%20la%20asociaci%C3%B3n"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="mailto:info@asociacionpetis.org?subject=Solicitude%20de%20informaci%C3%B3n%20sobre%20doaz%C3%B3ns"
             className="bg-white text-[var(--color-accent)] font-semibold py-4 px-8 rounded-full hover:bg-[var(--color-accent)] hover:text-white transition-colors duration-200 border-2 border-[var(--color-accent)]"
             >
-            Contactar por Instagram
+            Solicitar información
             </a>
           <p className="text-gray-500 mt-6 text-sm">
             Tamén podes contactar connosco para outras formas de colaboración:{" "}

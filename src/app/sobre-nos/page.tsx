@@ -33,16 +33,19 @@ export default function SobreNos() {
             </h2>
             <div className="prose prose-lg max-w-none">
               <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-                Tiñamos ganas, forzas e ilusión. Tiñamos a necesidade dunha tribo. 
-                Tiñamos un grupo de petises con coidadores desexando compartir emocións e experiencias.
+                Tiñamos ganas, forzas e ilusión. Tiñamos a necesidade dunha tribo. Tiñamos un grupo de petises con coidadores desexando compartir emocións e experiencias.
               </p>
               <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-                Así nace Petís, o teu espazo seguro en Pontevedra para que nunca máis 
-                te sintas soa, insegura ou xulgada.
+                Así nace Petís, o teu espazo seguro en Pontevedra para que nunca máis te sintas soa, insegura ou xulgada.
+              </p>
+              <p className="text-lg text-gray-700 mb-6 leading-relaxed">
+                Petís é unha asociación sen ánimo de lucro que naceu no 2023 en Pontevedra co obxectivo de crear unha rede de apoio entre familias, con especial atención á lactancia e á crianza. Actualmente, máis de 150 familias asociadas formamos esta rede na que nos acompañamos e ofrecemos información en distintos momentos da maternidade e da paternidade, dende a decisión de crear unha familia ata a crianza, pasando polo embarazo e o postparto.
+              </p>
+              <p className="text-lg text-gray-700 mb-6 leading-relaxed">
+                A Asociación Petís é un espazo seguro e de comprensión, unha tribo sensible na que compartir e apoiar os cambios que experimentamos ao longo do tempo para despexar dúbidas e medos.
               </p>
               <p className="text-lg text-gray-700 leading-relaxed">
-                Somos unha asociación de apoio á crianza e á lactancia que nace da 
-                necesidade de crear unha comunidade de apoio para familias con crianzas pequenas.
+                Petís é tamén un lugar para celebrar a crianza e permitir que os nosos e as nosas petises se desenvolvan nun ambiente amable de apego seguro e crianza respectuosa.
               </p>
             </div>
           </div>
@@ -59,10 +62,11 @@ export default function SobreNos() {
                 <span className="text-white text-3xl">🎯</span>
               </div>
               <h3 className="text-2xl font-bold text-gray-900 mb-4">A nosa misión</h3>
+              <p className="text-lg text-gray-700 leading-relaxed mb-4">
+                Petís ten a firme misión de tecer redes de apoio, de ser unha tribo na que as familias poidamos maternar e criar ós nosos petises sentíndonos acompañadas, nunha época na que moitas nais viven este proceso con sentimentos de soidade, ansiedade e esgotamento.
+              </p>
               <p className="text-lg text-gray-700 leading-relaxed">
-                Ofrecer apoio, información e acompañamento ás familias durante a 
-                crianza, creando unha comunidade segura e acolledora onde cada 
-                persoa se sinta comprendida e apoiada.
+                Formamos unha tribo forte que traballa polo benestar dos seus membros e pola reivindicación do lugar que as familias merecemos na sociedade. Seremos sempre unha asociación que busca a aprendizaxe colectiva e colaborativa, nun clima de seguridade, sen xuízos, baseado no respecto, a empatía, a inclusión, a confidencialidade, a sororidade e a crianza respectuosa dos nosos petises.
               </p>
             </div>
 
@@ -136,8 +140,7 @@ export default function SobreNos() {
                 <div className="flex-1 text-center md:text-left">
                   <h3 className="text-2xl font-bold text-gray-900 mb-2">Aina - Tesorera</h3>
                   <p className="text-lg text-gray-700 leading-relaxed">
-                    Hola! Yo soy Aina, mamá de Alexandre, de profesión odontóloga y ahora también tesorera de Petís. Siempre quise casarme y ser mamá. Lo de casarse está bien pero no me pillan en otra, lo de maternar me está pareciendo el trabajo más difícil que he desempañado hasta la fecha. Así que, para ponérmelo más fácil, me animé a unirme a Petís y fue todo un acierto. Considero que es un privilegio contar con una asociación en nuestra ciudad que trabaje haciendo red para dar el apoyo que tanto necesita la crianza, y por eso estamos aquí. Gracias Petís.
-                  </p>
+Ola! Eu son Aina, nai de Alexandre, de profesión odontóloga e agora tamén tesoureira de Petís. Sempre quixen casar e ser nai. O de casar está ben pero non me pillan noutra, o de maternar estame parecendo o traballo máis difícil que desempeñei ata hoxe. Polo que, para facermo máis sinxelo, animeime a unirme a Petís e foi todo un acerto. Considero que é un privilexio contar cunha asociación na nosa cidade que traballe facendo rede para dar o apoio que tanto necesita a crianza, e por iso estamos aquí. Grazas Petís.                  </p>
                 </div>
               </div>
 

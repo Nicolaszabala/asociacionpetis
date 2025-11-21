@@ -1,10 +1,13 @@
 import Link from "next/link";
 import Image from "next/image";
-import { articlesArr } from "./articles";
+import { getArticles } from "@/lib/drupal/client";
 
-const [featured, ...rest] = articlesArr;
+// ISR: Revalidar cada 60 segundos
+export const revalidate = 60;
 
-export default function Blog() {
+export default async function Blog() {
+  const articlesArr = await getArticles();
+  const [featured, ...rest] = articlesArr;
   // Convertimos el objeto en array y ordenamos por fecha descendente
   // La lógica de parseGalicianDate ya no es necesaria, ya que los artículos son estáticos
   // const articlesArr: Article[] = Object.entries(blogArticles)
@@ -45,7 +48,7 @@ export default function Blog() {
                     <span className="bg-[#f7f6d9] text-[#a86e2c] px-3 py-1 rounded-full text-xs font-medium">
                       Destacado
                     </span>
-                    <span className="ml-4">{featured.date}</span>
+                    <span className="ml-4">{new Date(featured.publishedAt).toLocaleDateString('gl-ES', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
                   </div>
                   <h2 className="text-2xl font-bold text-main mb-4">
                     {featured.title}
@@ -92,7 +95,7 @@ export default function Blog() {
                 </div>
                 <div className="p-6">
                   <div className="flex items-center text-sm text-[var(--color-accent)] mb-3">
-                    <span>{article.date}</span>
+                    <span>{new Date(article.publishedAt).toLocaleDateString('gl-ES', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
                   </div>
                   <h3 className="text-xl font-semibold text-main mb-3">
                     {article.title}
