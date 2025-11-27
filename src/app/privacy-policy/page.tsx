@@ -31,8 +31,8 @@ export default function PrivacyPolicy() {
             El responsable del tratamiento de los datos personales recogidos en Asociación Petís de Apoio á crianza e á lactancia es: Asociación Petís de Apoio á crianza e á lactancia, provista de NIF/CIF: G13773775 e inscrito en:  con los siguientes datos registrales: , cuyo representante es: Asociación Petís de Apoio á crianza e á lactancia (en adelante, Responsable del tratamiento). Sus datos de contacto son los siguientes:
             <br />
             <strong>Dirección:</strong> Rua Lepanto 7, Pontevedra<br />
-            <strong>Teléfono de contacto:</strong> <br />
-            <strong>Email de contacto:</strong> asociacionpetis@gmail.com
+            <strong>Teléfono de contacto:</strong> 629 84 39 79 <br />
+            <strong>Email de contacto:</strong> info@asociacionpetis.org
           </p>
           <h3 className="text-xl font-semibold text-gray-900 mb-2">
             Registro de Datos de Carácter Personal
