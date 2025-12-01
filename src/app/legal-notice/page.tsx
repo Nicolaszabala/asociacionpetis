@@ -16,8 +16,8 @@ export default function LegalNotice() {
             La titularidad de este sitio web, www.asociacionpetis.org, (en adelante, Sitio Web) la ostenta: Asociación Petís de Apoio á crianza e á lactancia, provista de NIF: G13773775 e inscrita en:  con los siguientes datos registrales: , cuyo representante es: Asociación Petís de Apoio á crianza e á lactancia, y cuyos datos de contacto son:
             <br />
             <strong>Dirección:</strong> Rua Lepanto 7, Pontevedra<br />
-            <strong>Teléfono de contacto:</strong> <br />
-            <strong>Email de contacto:</strong> asociacionpetis@gmail.com
+            <strong>Teléfono de contacto:</strong> 629 84 39 79<br />
+            <strong>Email de contacto:</strong> info@asociacionpetis.org
           </p>
 
           <h2 className="text-2xl font-bold text-gray-900 mb-4">II. TÉRMINOS Y CONDICIONES GENERALES DE USO</h2>
