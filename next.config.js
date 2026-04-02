@@ -9,6 +9,21 @@ const nextConfig = {
         port: '',
         pathname: '/sites/default/files/**',
       },
+      {
+        protocol: 'https',
+        hostname: '**.cdninstagram.com',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: '**.fbcdn.net',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'lookaside.instagram.com',
+        pathname: '/**',
+      },
     ],
   },
 }

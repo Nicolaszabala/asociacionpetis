@@ -1,20 +1,16 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import Image from "next/image";
-import { getArticleBySlug, getArticles } from "@/lib/drupal/client";
+import { getBlogArticleBySlug, getBlogStaticParams } from "@/lib/content/client";
 import ShareButtons from "./ShareButtons";
-
-// ISR: Revalidar cada 60 segundos
-export const revalidate = 60;
 
 // SSG: Pre-generar páginas estáticas para todos los artículos
 export async function generateStaticParams() {
-  const articles = await getArticles();
-  return articles.map(article => ({ slug: article.slug }));
+  return getBlogStaticParams();
 }
 
 export default async function BlogPost({ params }: { params: { slug: string } }) {
-  const article = await getArticleBySlug(params.slug);
+  const article = await getBlogArticleBySlug(params.slug);
 
   if (!article) {
     notFound();
@@ -61,6 +57,18 @@ export default async function BlogPost({ params }: { params: { slug: string } })
               className="prose prose-lg mx-auto text-left mb-8"
               dangerouslySetInnerHTML={{ __html: article.content }}
             />
+            {article.externalUrl && (
+              <div className="mb-8">
+                <a
+                  href={article.externalUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center rounded-full border-2 border-[var(--color-accent)] px-4 py-2 font-semibold text-[var(--color-accent)] transition-colors duration-200 hover:bg-[var(--color-accent)] hover:text-white"
+                >
+                  Ver publicación orixinal
+                </a>
+              </div>
+            )}
             <ShareButtons title={article.title} />
           </div>
         </div>

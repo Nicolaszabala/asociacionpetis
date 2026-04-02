@@ -143,6 +143,8 @@ export interface Article {
   tags: string[];
   publishedAt: string;
   updatedAt: string;
+  externalUrl?: string;
+  source?: 'drupal' | 'instagram';
 }
 
 /**

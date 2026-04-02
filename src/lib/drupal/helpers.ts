@@ -103,6 +103,7 @@ export function transformDrupalArticle(
     tags: getTags(drupalArticle, included),
     publishedAt: drupalArticle.attributes.created,
     updatedAt: drupalArticle.attributes.changed,
+    source: 'drupal',
   };
 }
 

@@ -1,19 +1,10 @@
 import Link from "next/link";
 import Image from "next/image";
-import { getArticles } from "@/lib/drupal/client";
-
-// ISR: Revalidar cada 60 segundos
-export const revalidate = 60;
+import { getBlogArticles } from "@/lib/content/client";
 
 export default async function Blog() {
-  const articlesArr = await getArticles();
+  const articlesArr = await getBlogArticles();
   const [featured, ...rest] = articlesArr;
-  // Convertimos el objeto en array y ordenamos por fecha descendente
-  // La lógica de parseGalicianDate ya no es necesaria, ya que los artículos son estáticos
-  // const articlesArr: Article[] = Object.entries(blogArticles)
-  //   .map(([slug, data]) => ({ slug, ...(data as any) }))
-  //   .sort((a, b) => parseGalicianDate(b.date).getTime() - parseGalicianDate(a.date).getTime());
-  // const [featured, ...rest] = articlesArr;
   return (
     <div className="min-h-screen bg-gradient-to-br from-light to-accent">
       {/* Hero Section */}
