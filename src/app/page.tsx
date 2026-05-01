@@ -1,6 +1,59 @@
 import Image from "next/image";
 import Link from "next/link";
 
+const collaboratorLogos = [
+  {
+    name: "Creciendo Juntos Elvi",
+    src: "/colab/Logos colaboradores/Elvi.png",
+    href: "https://www.instagram.com/creciendojuntos.elvi/",
+  },
+  {
+    name: "Míster Baby",
+    src: "/colab/Logos colaboradores/M%C3%ADster Baby.jpg",
+    href: "https://www.instagram.com/misterbabypontevedra/?hl=es",
+  },
+  {
+    name: "Galería Tangram",
+    src: "/colab/Logos colaboradores/Galer%C3%ADa Tangram.png",
+    href: "https://www.instagram.com/galeria.tangram/",
+  },
+  {
+    name: "A Balea das Cores",
+    src: "/colab/Logos colaboradores/A Balea das Cores.jpeg",
+    href: "https://www.instagram.com/abaleadascoresxogueteria/",
+  },
+  {
+    name: "Barbería Meraky",
+    src: "/colab/Logos colaboradores/Barber%C3%ADa Meraky.jpeg",
+    href: "https://www.instagram.com/barberiameraky/",
+  },
+  {
+    name: "Santuario Vacaloura",
+    src: "/colab/Logos colaboradores/Santuario Vacaloura.jpeg",
+    href: "https://www.instagram.com/santuariovacaloura/",
+  },
+  {
+    name: "Libraría Nobel Pontevedra",
+    src: "/colab/Logos colaboradores/Nobel.jpg",
+    href: "https://www.instagram.com/espazolectornobel_pontevedra/",
+  },
+  {
+    name: "Concello de Pontevedra",
+    src: "/colab/Logos colaboradores/Concello Pontevedra.jpg",
+    href: "https://www.instagram.com/pontevedrate/",
+  },
+  {
+    name: "Concello de Sanxenxo",
+    src: "/colab/Logos colaboradores/Concello Sanxenxo.jpeg",
+    href: "https://www.instagram.com/concellosanxenxo/",
+  },
+  {
+    name: "CONEXOS",
+    src: "/colab/Logos colaboradores/logo-conexos.jpg",
+    href: "https://conexos.es",
+  },
+];
+
 export default function Home() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-light to-accent">
@@ -125,6 +178,45 @@ export default function Home() {
               <p className="text-text-secondary">
                 Un espazo seguro no que poder estar en contacto con outras familias en calquera momento, para recibir apoio e consello, compartir información e sentir a tribo fóra das reunións presenciais. A comunidade conta con grupos temáticos (recomendacións médicas, lactancia, produtos de puericultura, sono infantil...).
               </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Collaborators Section */}
+      <section id="colaboracions" className="py-20 bg-[#fffaf5] scroll-mt-24 overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h3 className="text-3xl font-bold text-gray-900 mb-4">
+              Colaboracións
+            </h3>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Proxectos, entidades e marcas que camiñan connosco e fan medrar a rede Petís.
+            </p>
+          </div>
+
+          <div className="collaborators-marquee">
+            <div className="collaborators-track">
+              {[...collaboratorLogos, ...collaboratorLogos].map((logo, index) => (
+                <a
+                  key={`${logo.name}-${index}`}
+                  href={logo.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="collaborator-card group"
+                  aria-label={`Visitar ${logo.name}`}
+                >
+                  <div className="relative h-16 w-28 sm:h-20 sm:w-36 md:h-24 md:w-40">
+                    <Image
+                      src={logo.src}
+                      alt={`Logo de ${logo.name}`}
+                      fill
+                      sizes="(max-width: 640px) 128px, (max-width: 768px) 160px, 176px"
+                      className="object-contain transition-transform duration-300 group-hover:scale-105"
+                    />
+                  </div>
+                </a>
+              ))}
             </div>
           </div>
         </div>

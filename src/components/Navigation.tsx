@@ -41,6 +41,9 @@ export default function Navigation() {
             <Link href="/doazons" className="text-gray-700 hover:text-[var(--color-primary-hover)] transition-colors menu-underline">
                 Doazóns
             </Link>
+            <Link href="/#colaboracions" className="text-gray-700 hover:text-[var(--color-primary-hover)] transition-colors menu-underline">
+              Colaboracións
+            </Link>
             <Link href="/blog" className="text-gray-700 hover:text-[var(--color-primary-hover)] transition-colors menu-underline">
               Blog
             </Link>
@@ -103,6 +106,13 @@ export default function Navigation() {
                 onClick={() => setIsMenuOpen(false)}
               >
                 Doazóns
+              </Link>
+              <Link 
+                href="/#colaboracions" 
+                className="block px-3 py-2 text-gray-700 hover:text-[var(--color-primary-hover)] transition-colors menu-underline"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Colaboracións
               </Link>
               <Link 
                 href="/blog" 
