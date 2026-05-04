@@ -98,27 +98,12 @@ h1, h2, h3, h4, h5, h6 {
   transform: scale(0.98);
 }
 
-@keyframes collaboratorsScroll {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(calc(-50% - 0.75rem));
-  }
-}
-
 .collaborators-marquee {
   position: relative;
-  overflow-x: auto;
-  overflow-y: hidden;
+  overflow: hidden;
   padding: 0.5rem 0;
   mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
-  scrollbar-width: none;
-  touch-action: pan-x;
-}
-
-.collaborators-marquee::-webkit-scrollbar {
-  display: none;
+  touch-action: pan-y;
 }
 
 .collaborators-track {
@@ -126,6 +111,13 @@ h1, h2, h3, h4, h5, h6 {
   width: max-content;
   gap: 1.5rem;
   user-select: none;
+  will-change: transform;
+}
+
+.collaborators-set {
+  display: flex;
+  flex: 0 0 auto;
+  gap: 1.5rem;
 }
 
 .collaborator-card {
