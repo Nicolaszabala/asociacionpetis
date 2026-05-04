@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import CollaboratorsCarousel from "@/components/CollaboratorsCarousel";
 
 const collaboratorLogos = [
   {
@@ -49,7 +50,7 @@ const collaboratorLogos = [
   },
   {
     name: "CONEXOS",
-    src: "/colab/Logos colaboradores/logo-conexos.jpg",
+    src: "/colab/Logos colaboradores/Conexos.png",
     href: "https://conexos.es",
   },
 ];
@@ -195,30 +196,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="collaborators-marquee">
-            <div className="collaborators-track">
-              {[...collaboratorLogos, ...collaboratorLogos].map((logo, index) => (
-                <a
-                  key={`${logo.name}-${index}`}
-                  href={logo.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="collaborator-card group"
-                  aria-label={`Visitar ${logo.name}`}
-                >
-                  <div className="relative h-16 w-28 sm:h-20 sm:w-36 md:h-24 md:w-40">
-                    <Image
-                      src={logo.src}
-                      alt={`Logo de ${logo.name}`}
-                      fill
-                      sizes="(max-width: 640px) 128px, (max-width: 768px) 160px, 176px"
-                      className="object-contain transition-transform duration-300 group-hover:scale-105"
-                    />
-                  </div>
-                </a>
-              ))}
-            </div>
-          </div>
+          <CollaboratorsCarousel logos={collaboratorLogos} />
         </div>
       </section>
 

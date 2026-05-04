@@ -109,20 +109,23 @@ h1, h2, h3, h4, h5, h6 {
 
 .collaborators-marquee {
   position: relative;
-  overflow: hidden;
+  overflow-x: auto;
+  overflow-y: hidden;
   padding: 0.5rem 0;
   mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+  scrollbar-width: none;
+  touch-action: pan-x;
+}
+
+.collaborators-marquee::-webkit-scrollbar {
+  display: none;
 }
 
 .collaborators-track {
   display: flex;
   width: max-content;
   gap: 1.5rem;
-  animation: collaboratorsScroll 30s linear infinite;
-}
-
-.collaborators-track:hover {
-  animation-play-state: paused;
+  user-select: none;
 }
 
 .collaborator-card {
