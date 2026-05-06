@@ -35,7 +35,7 @@ const collaboratorLogos = [
   },
   {
     name: "Libraría Nobel Pontevedra",
-    src: "/colab/Logos colaboradores/Nobel.jpg",
+    src: "/colab/Logos colaboradores/Nobel.png",
     href: "https://www.instagram.com/espazolectornobel_pontevedra/",
   },
   {
